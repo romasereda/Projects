@@ -1,0 +1,81 @@
+.container
+  margin: 0 6.95%
+
+.title
+  margin: 0 
+  text-align: center
+  font-weight: 700
+  font-size: 40px
+  line-height: 48px
+  color: $dark-extra
+  &--margin32
+    margin-bottom: 32px 
+
+.slick-arrow
+  position: absolute
+  top: 0
+  right: 8px
+  width: 48px
+  height: 48px
+  font-size: 0
+  background-color: $accent
+  background-image: url(../images/dest/slider__arrow.svg)
+  background-repeat: no-repeat
+  background-position: center
+  border: none
+  border-radius: 50%
+  cursor: pointer
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    opacity: 0.7
+
+.slick-dots
+  display: flex
+  gap: 20px
+
+.slick-dots li
+  display: flex 
+
+.slick-dots button
+  background-color: transparent
+  border: none
+  width: 11px
+  height: 11px
+  font-size: 0
+  background-color: #D8D8D8
+  border-radius: 50%
+  cursor: pointer
+
+.slick-dots .slick-active button
+  background-color: $accent
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 27px 
+    height: 27px
+    border: 1px solid $accent
+    border-radius: 50%
+    transform: translate3d(-50%, -50%, 0)
+
+.section
+  padding-top: 60px
+  padding-bottom: 87px
+
+@media (max-width: 1024px)
+  
+  .container
+    margin: 0 40px
+
+  .title
+    font-size: 30px
+    line-height: 35px
+
+@media (max-width: 768px)
+
+  .title
+    font-size: 25px
+    line-height: 30px

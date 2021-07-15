@@ -1,0 +1,85 @@
+.collection
+  padding: 78px 40px
+  color: $dark
+  background-color: #E6E3C4
+
+.collection__wrapper
+  padding: 60px 0
+  display: grid
+  gap: 30px
+  grid-template-columns: repeat(2, 1fr)
+  border-top: 1px solid $accent
+  border-bottom: 1px solid $accent
+
+.collection__block-text
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 30px
+
+.collection__paragraph
+  max-width: 445px
+  line-height: 21px
+
+.collection__table
+  width: 445px
+  border-collapse: collapse
+  & tr
+    border-bottom: 1px solid $dark
+    display: flex
+
+.collection__year
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 76px
+  min-height: 73px
+  border-right: 1px solid $dark
+
+.collection__name-wrapper
+  padding: 15px 0
+  padding-left: 28px
+
+.collection__name
+  display: block
+
+.collection__block-image
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+  align-content: start
+
+.collection__image
+  width: 100%
+
+.collection__image--big
+  grid-column: span 2
+
+@media (max-width: 1024px)
+  .collection__block-image
+    gap: 10px
+
+  .collection__block-text
+    gap: 10px
+
+@media (max-width: 768px)
+  .collection
+    padding: 40px 20px
+
+  .collection__wrapper
+    padding: 20px 0
+    grid-template-columns: 100%
+
+  .collection__paragraph
+    max-width: 100%
+
+  .collection__table
+    margin: 0 auto
+
+  .collection__link
+    margin: 0 auto
+    display: block
+
+@media (max-width: 500px)
+  .collection__table
+    width: 100%

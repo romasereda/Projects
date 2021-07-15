@@ -1,0 +1,247 @@
+.rooms
+  padding-top: 44px
+  padding-bottom: 44px
+  background-color: #FCF8F3
+
+.rooms__container
+  margin-right: 0
+  display: grid
+  grid-template-columns: 34.62% 65.38%
+
+.rooms__block-text
+  padding-right: 18.5%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+
+.rooms__title
+  margin-bottom: 8px
+  text-align: left
+
+.rooms__text
+  margin-bottom: 24px
+  font-weight: 500
+  font-size: 16px
+  line-height: 24px
+
+.rooms__link
+  padding: 12px 40px
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+  display: block
+  color: #fff
+  background-color: $accent
+  border: 1px solid $accent
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    outline: none
+    color: $accent
+    background-color: #fff
+    border: 1px solid $accent
+
+.rooms__block-slider
+  overflow: hidden
+
+.slider-rooms
+  position: relative
+  left: -21px 
+  width: 46.17%
+  height: 582px
+
+.slider-rooms__item
+  position: relative
+  width: 100%
+  height: 83.5%
+  transition: 1s ease-out
+
+.slider-rooms__item.slick-active
+  height: 100%
+  width: 100%
+
+.slider-rooms__image
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100% 
+  object-fit: cover
+  object-position: center
+
+.slider-rooms .slick-list
+  overflow: visible
+  height: 100%
+
+.slider-rooms .slick-track
+  height: 100%
+  display: flex
+  gap: 24px
+
+.slider-rooms .slick-dots
+  position: absolute
+  right: -135px
+  bottom: 37px
+
+.slider-rooms .slick-prev
+  visibility: hidden
+
+.slider-rooms .slick-next
+  position: absolute
+  right: -103%
+  top: 50%  
+  transform: translateY(-50%)
+  background-color: #fff
+  background-image: url(../images/dest/slider__arrow_orange.svg)
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16)
+  &:hover,
+  &:focus
+    background-image: url(../images/dest/slider__arrow.svg)
+    background-color: $accent
+    opacity: 1
+
+.slider-rooms__wrapper
+  position: absolute
+  left: 24px
+  bottom: 24px
+  padding: 32px
+  display: none
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#fff, 0.7)
+    backdrop-filter: blur(3px)
+    z-index: -1
+
+.slider-rooms__text
+  margin-bottom: 8px
+  font-size: 500px
+  font-size: 16px
+  line-height: 24px
+  display: flex
+  gap: 8px
+
+.slider-rooms__index
+  padding-right: 35px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 12px 
+    right: 0
+    width: 27px
+    height: 1px
+    background-color: $textcolor
+
+.slider-rooms__name
+  font-weight: 600
+  font-size: 28px
+  line-height: 33.5px
+  color: $dark-extra
+
+.slider-rooms__link
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 48px 
+  height: 48px  
+  background-color: $accent
+  background-image: url(../images/dest/slider_link.svg)
+  background-repeat: no-repeat  
+  background-position: right 15px center 
+  transform: translateX(100%)
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    outline: none
+    width: 80px
+
+@media (max-width: 1300px)
+
+  .slider-rooms
+    height: 400px
+
+  .slider-rooms__wrapper
+    left: 10px
+    bottom: 10px
+    padding: 10px
+
+  .slider-rooms__link
+    width: 35px
+    height: 35px
+    background-position: right 8px center
+    &:hover,
+    &:focus
+      width: 50px
+
+@media (max-width: 1024px)
+
+  .slider-rooms
+    height: 300px
+
+  .rooms__text
+    font-size: 14px
+    line-height: 16px
+
+  .slider-rooms .slick-dots
+    bottom: 15px
+
+@media (max-width: 930px)
+
+  .rooms__container
+    margin-right: 0
+    display: block
+
+  .rooms__block-text
+    margin-bottom: 20px
+
+  .slider-rooms
+    width: 50%
+    height: 400px
+
+  .slider-rooms .slick-track
+    gap: 10px
+
+  .slider-rooms__wrapper
+    left: 20px
+
+  .slider-rooms .slick-next
+    right: -101%
+
+@media (max-width: 650px)
+
+  .slider-rooms
+    height: 350px
+
+@media (max-width: 600px)
+
+  .slider-rooms
+    width: 70%
+
+  .slider-rooms .slick-next
+    right: -45%
+
+@media (max-width: 470px)
+
+  .slider-rooms .slick-dots
+    display: none
+
+  .slider-rooms__item
+    position: relative
+    width: 100%
+    height: 100%
+
+@media (max-width: 420px)  
+
+  .slider-rooms
+    width: 85%
+    height: 250px
+
+  .slider-rooms .slick-next
+    right: -22%

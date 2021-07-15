@@ -1,0 +1,140 @@
+.registration
+  padding: 130px 50px 100px
+  background-color: $dark
+
+.registration__wrapper
+  position: relative
+  padding-top: 105px
+  padding-bottom: 80px
+  border: 3px solid $light
+  &::before
+    content: ""
+    position: absolute
+    top: -67px
+    left: -30px
+    width: 260px
+    height: 260px
+    background-image: url(../images/dest/grapes.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  &::after
+    content: ""
+    position: absolute
+    top: -67px
+    right: -53px
+    width: 260px
+    height: 200px
+    background-image: url(../images/dest/barrel.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+.registration__title
+  position: absolute
+  top: -32px
+  left: 50%
+  padding-left: 50px
+  padding-right: 50px
+  background-color: $dark
+  transform: translateX(-50%)
+
+.registration__content
+  margin: 0 auto
+  max-width: 539px
+
+.registration__paragraph
+  margin-bottom: 80px
+
+.form
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 35px 30px
+
+.form__item,
+.form__score
+  position: relative
+  padding: 9px 0
+  font-weight: 500
+  font-size: 13px
+  line-height: 20px
+  background-color: $dark
+  border: none
+  border-bottom: 1px solid #fff
+  transition: 0.3s ease-out
+  overflow: hidden
+  &:hover,
+  &:focus
+    background-color: #fff
+    color: $accent
+    outline: none
+  &::placeholder
+    transition: 0.3s ease-out
+  &:hover::placeholder,
+  &:focus::placeholder
+    color: $accent
+
+.form__score
+  color: #fff
+  grid-column: span 2
+  cursor: pointer
+
+.form__button
+  margin-top: 20px
+  padding: 15px 30px
+  grid-column: span 2
+  text-transform: uppercase
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  letter-spacing: 0.05em
+  color: #fff
+  background-color: $dark
+  border: 1px solid #fff
+  transition: 0.3s ease-out
+  cursor: pointer
+  &:hover,
+  &:focus
+    background-color: $accent
+    border-color: $accent
+
+@media (max-width: 1150px)
+  .registration__wrapper
+    &::before
+      top: -67px
+      left: -30px
+      width: 200px
+      height: 200px
+    &::after
+      top: -67px
+      right: -53px
+      width: 200px
+      height: 154px
+
+@media (max-width: 1085px)
+  .registration__title
+    padding-left: 20px
+    padding-right: 20px
+
+@media (max-width: 1000px)
+  .registration__wrapper
+    padding-top: 30px
+    &::before,
+    &::after
+      display: none
+
+  .registration__title
+    position: relative
+    left: 0
+    top: 0
+    transform: none
+
+  .registration__paragraph
+    margin-bottom: 20px
+
+@media (max-width: 768px)
+  .registration
+    padding: 70px 20px 40px
+
+  .form__item
+    grid-column: span 2

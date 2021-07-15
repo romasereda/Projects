@@ -1,0 +1,89 @@
+.mailing
+  padding: 0 40px
+  display: flex
+  justify-content: space-between
+  gap: 40px
+  width: 850px
+
+.mailing__list
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 20px
+
+.mailing__checkbox
+  position: absolute
+  left: -100px
+  &:checked + .mailing__text
+    color: $accent
+  &:checked + .mailing__text .mailing__svg
+    transform: rotate(180deg)
+  &:checked + .mailing__text path
+    stroke: $accent
+  &:focus + .mailing__text
+    color: $accent
+    outline: none
+  &:focus + .mailing__text .mailing__svg
+    transform: rotate(90deg)
+  &:focus + .mailing__text path
+    stroke: $accent
+
+.mailing__text
+  cursor: pointer
+  transition: 0.5s
+  &:hover
+    color: $accent
+  &:hover .mailing__svg
+    transform: rotate(90deg)
+  &:hover path
+    stroke: $accent
+
+.mailing__svg
+  position: relative
+  top: 3px
+  margin-right: 20px
+  transition: 0.5s
+
+.mailing__wrapper-outline
+  padding: 14px 
+  border: 1px solid $white
+
+.mailing__wrapper
+  padding: 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 15px
+  height: 100%
+  background-color: $white
+
+@media (max-width: 1024px)
+  .mailing__list
+    flex-grow: 1
+
+  .mailing__wrapper-outline
+    flex-grow: 2
+
+  .mailing__wrapper
+    flex-direction: column
+
+  .button--mailing
+    width: 100%
+
+@media (max-width: 850px)
+  .mailing
+    width: 100%
+
+@media (max-width: 750px)
+  .mailing
+    display: block
+    width: 100%
+
+  .mailing__list
+    margin-bottom: 30px
+    flex-direction: row
+    justify-content: start
+    flex-wrap: wrap
+
+  .mailing__item
+    margin-right: 60px

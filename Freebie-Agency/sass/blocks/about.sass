@@ -1,0 +1,174 @@
+.about
+  position: relative
+  height: 560px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.about__wrapper
+  position: relative
+  width: 310px
+  height: 420px
+
+.about__block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  &--bg-green
+    background-color: rgba($accent, 0.8)
+    z-index: 2
+  &--left
+    z-index: 3
+
+.anim-block-show
+  animation: 1.3s block-show ease-out forwards
+
+.anim-block-left
+  animation: 1.3s block-left ease-out forwards
+
+.anim-block-right
+  animation: 1.3s block-right ease-out forwards
+
+.anim-text
+  animation: 0.7s show-text 1.4s forwards
+
+.anim-text-nodelay
+  animation: 0.7s show-text forwards
+
+@keyframes block-show
+  0%
+    opacity: 0
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes block-left
+  0%
+    opacity: 0
+  50%
+    transform: translateX(0px) translateY(0px)
+    opacity: 1
+  100%
+    transform: translateX(-210px) translateY(-62px)
+    opacity: 1
+
+@keyframes block-right
+  0%
+    opacity: 0
+  50%
+    transform: translateX(0px) translateY(0px)
+    opacity: 1
+  100%
+    transform: translateX(210px) translateY(62px)
+    opacity: 1
+
+@keyframes show-text
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.about__image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.about__text-left
+  position: absolute
+  left: 65px
+  top: 62px
+  z-index: 5
+  opacity: 0
+
+.about__text-right
+  position: absolute
+  right: $padding
+  bottom: 62px
+  z-index: 5
+  opacity: 0
+
+.about__title
+  text-transform: uppercase
+  font-family: Oswald, sans-serif
+  font-weight: bold
+  font-size: 36px
+  line-height: 53px
+  letter-spacing: 2.3px
+  span
+    font-family: $userfont
+    font-weight: 300
+    font-size: 42px
+    line-height: 57px
+    letter-spacing: 2.7px
+    color: #504e4e
+  
+.about__paragraph
+  position: relative
+  margin-left: 50px
+  max-width: 280px
+  font-weight: 300
+  font-size: 15px
+  line-height: 25px
+  &::before
+    content: ""
+    position: absolute
+    left: -30px
+    top: 12px
+    width: 20px
+    height: 2px
+    background-color: #353535
+
+@media (max-width: 1024px)
+  .about__wrapper
+    position: relative
+    width: 250px
+    height: 330px
+
+  .about__title
+    font-size: 28px
+    line-height: 42px
+    span
+      font-size: 30px
+      line-height: 45px
+
+  .about__paragraph
+    margin: 0
+    margin-left: 35px
+
+  .about__text-right
+    bottom: 100px
+
+  @keyframes block-left
+    0%
+      opacity: 0
+    50%
+      transform: translateX(0px) translateY(0px)
+      opacity: 1
+    100%
+      transform: translateX(-125px) translateY(-50px)
+      opacity: 1
+
+  @keyframes block-right
+    0%
+      opacity: 0
+    50%
+      transform: translateX(0px) translateY(0px)
+      opacity: 1
+    100%
+      transform: translateX(125px) translateY(50px)
+      opacity: 1
+
+@media (max-width: 620px)
+  .about
+    display: block
+    height: auto
+
+  .about__wrapper
+    display: none
+
+  .about__text-left, .about__text-right
+    position: static

@@ -1,0 +1,82 @@
+.comments
+  position: relative
+  overflow: hidden
+
+.comments__item
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 50%
+    width: 44%
+    height: 1px
+    background-color: #bbb
+    transform: translateX(-50%)
+
+.comments__text
+  margin: 0
+  max-width: 735px
+  text-align: center
+  font-weight: 300
+  font-size: 14px
+  line-height: 31px
+  letter-spacing: 0.9px
+  color: #373737
+
+.comments__author
+  margin: 0
+  margin-bottom: 25px
+  padding-top: 80px
+  text-transform: uppercase
+  font-family: Oswald, sans-serif
+  font-size: 18px
+  line-height: 27px
+  letter-spacing: 1.15px
+  color: #373737
+  background-image: url(../images/dest/quotes.png)
+  background-repeat: no-repeat
+  background-position: center 30px
+  & span
+    text-transform: none
+    font-weight: 300
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.9px
+    color: #bbb
+
+.comments__raiting
+  padding-bottom: 30px
+
+.comments__star
+  width: 15px
+  height: 15px
+  &--opacity2
+    opacity: 0.2
+
+.comments__navigation-button
+  position: absolute
+  top: auto
+  bottom: 0
+  width: 50px
+  &::after
+    content: "←"
+    font-family: Oswald, sans-serif
+    width: 50px
+    color: #000
+    transition: 0.5s ease-out
+  &--prev
+    left: 0
+  &--next
+    right: 0
+    bottom: -17px
+    transform: rotate(180deg)  
+  &:hover, &:focus
+    content: "←"
+    outline: none
+    &::after
+      color: $accent  

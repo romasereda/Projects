@@ -1,0 +1,80 @@
+.form
+  display: grid
+  gap: 10px
+  &--book
+    margin: 0 auto
+    max-width: 565px
+    grid-template-columns: repeat(2, 1fr)
+  &--contact
+    grid-template-columns: repeat(6, 1fr)
+
+.form__input
+  padding: 22px
+  height: 60px
+  font-size: 14px
+  line-height: 19px
+  background-color: $gray-bg
+  border: none
+  border-radius: 5px
+  transition: 0.5s
+  &:hover,
+  &:focus
+    background-color: $accent
+    outline: none
+    color: $white
+    &::placeholder
+      color: $white
+  &--contact
+    grid-column: span 2
+  &--span6
+    grid-column: span 6
+  &--h120
+    height: 120px
+
+.form__textarea
+  resize: none
+
+.form__text
+  margin: 0
+  grid-column: span 3
+  display: flex
+  justify-content: space-between
+  gap: 10px
+  align-items: center
+  font-size: 12px
+  font-weight: bold
+  color: rgba(51, 51, 51, 0.5)
+
+.form__span
+  display: flex
+  align-items: center
+
+@media (max-width: 1360px)
+  .form__text
+    font-size: 10px
+
+@media (max-width: 1024px)
+  .form__text
+    grid-column: span 6
+    order: 1
+
+@media (max-width: 900px)
+  .form__input
+    height: 48px
+    &--h120
+      height: 108px
+
+@media (max-width: 600px)
+  .form__input
+    &--contact
+      grid-column: span 6
+
+  .form__text
+    flex-direction: column
+
+@media (max-width: 500px)
+  .form__input
+    grid-column: span 2
+    &--contact,
+    &--span6
+      grid-column: span 6

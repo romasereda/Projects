@@ -1,0 +1,36 @@
+.breadcrumbs
+  margin: 0 auto
+  margin-top: 60px
+  margin-bottom: 50px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  font-size: 14px
+
+.breadcrumbs__link
+  color: $textcolor
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+
+.breadcrumbs__item
+  position: relative
+  margin-right: 40px
+  margin-bottom: 10px
+  &::before
+    content: "/"
+    position: absolute
+    right: -25px
+    font-size: 16px
+  &--last
+    margin-right: 0
+    &::before
+      display: none
+
+@media (max-width: 768px)
+  .breadcrumbs
+    margin-top: 35px
+    margin-bottom: 25px
+

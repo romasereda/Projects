@@ -1,0 +1,87 @@
+.footer
+  background-color: $green
+  color: #fff
+
+.footer__wrapper
+  width: 1110px
+  margin: 0 auto
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 50px
+
+.footer__column
+  display: flex
+  flex-direction: column
+  gap: 40px
+
+.footer__title
+  margin-bottom: 20px
+
+.footer__list
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.footer__link
+  font-size: 14px
+  color: #e0e0e0
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $yellow
+    text-decoration: underline
+
+.footer__list-social
+  display: flex
+  justify-content: space-between
+
+.footer__link-cosial
+  & path
+    transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    & path
+      fill: $yellow
+
+.footer__text
+  margin: 0
+  margin-bottom: 20px  
+
+.form-email
+  display: flex
+
+.form-email__input
+  flex-grow: 1
+@media (max-width: 1210px)
+  .footer__wrapper
+    width: 100%
+    padding: 75px 50px
+
+@media (max-width: 1120px)
+  .footer__title
+    margin-bottom: 5px
+
+@media (max-width: 900px)
+  .footer__wrapper
+    grid-template-columns: repeat(2, 1fr)
+    gap: 50px
+
+@media (max-width: 768px)
+  .footer__wrapper
+    padding-top: 40px
+    padding-bottom: 40px
+    gap: 20px
+
+@media (max-width: 630px)
+  .footer__wrapper
+    grid-template-columns: repeat(2, 200px) 
+
+@media (max-width: 480px)
+  .footer__wrapper
+    grid-template-columns: 100%
+  
+  .footer__list
+    &--social
+      flex-direction: row
+      align-items: center
+      justify-content: space-evenly

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" sizes="32x32" href="images/dest/favicon32.ico">
+  <link rel="icon" sizes="64x64" href="images/dest/favicon64.ico">
+
+  <meta name="theme-color" content="#4CAF50">
+
+  <title>Freebie Agency</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <header class="header">
+    
+    <nav class="navigation container">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a class="navigation__link navigation__link--disabled">Works</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">Blog</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+      </ul>    
+    </nav>
+
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <div class="header-slider">
+      
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide header-slider__item header-slider__item--1">
+          <h2 class="header__title">Where great ideas come to life</h2>
+          <p class="header__text">Passionate creative studio helping startups grow their business!</p>
+        </div>
+        <div class="swiper-slide header-slider__item header-slider__item--2">
+          <h2 class="header__title">Authenticity is about being genuine</h2>
+          <p class="header__text">It’s about getting personal. Our designs give meaning to the beauty in your world, not someone else’s!</p>
+        </div>
+        <div class="swiper-slide header-slider__item header-slider__item--3">
+          <h2 class="header__title">Building meaning into beauty</h2>
+          <p class="header__text">We want to take you to the moon. And have you feel at home there!</p>
+        </div>
+        
+      </div>
+      
+      <div class="swiper-pagination header-slider__pagination"></div>
+    </div>
+
+  </header>
+
+  <main>
+    
+    <section class="section">
+
+      <div class="about container">
+
+        <div class="about__wrapper">
+          <div class="about__block about__block--left"><img src="images/dest/about_1.jpg" alt="the guy looks out the window" class="about__image"></div>
+          <div class="about__block about__block--bg-green"></div>
+          <div class="about__block about__block--right"><img src="images/dest/about_2.jpg" alt="the guy is on the road" class="about__image"></div>
+        </div>
+
+        <div class="about__text-left">
+          <h2 class="about__title">We are<br><span>the sqwd</span></h2>
+          <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+
+        <div class="about__text-right">
+          <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section section--bg-gray">
+      
+      <div class="container">
+        
+        <h2 class="title">Our Services</h2>
+
+        <ul class="services">
+          <li class="services__item">
+            <h3 class="title title__services">Branding</h3>
+            <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <a href="" class="button">Read more</a>
+            <div class="services__wrapper-image">
+              <img class="services__image" src="images/dest/services_bg_1.png" alt="branding">
+            </div>
+          </li>
+          <li class="services__item">
+            <h3 class="title title__services">Design</h3>
+            <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <a href="" class="button">Read more</a>
+            <div class="services__wrapper-image">
+              <img class="services__image" src="images/dest/services_bg_2.png" alt="design">
+            </div>
+          </li>
+          <li class="services__item">
+            <h3 class="title title__services">Development</h3>
+            <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <a href="" class="button">Read more</a>
+            <div class="services__wrapper-image">
+              <img class="services__image" src="images/dest/services_bg_3.png" alt="Development">
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      
+    </section>
+
+    <section class="section section--padding-0 container">
+
+      <div class="works">
+
+        <div class="works__header">
+          <h2 class="title">Latest Works</h2>
+          <ul class="tabs">
+            <li class="tabs__item"><button class="tab" data-section="all">All</button></li>
+            <li class="tabs__item"><button class="tab" data-section="design">Web design</button></li>
+            <li class="tabs__item"><button class="tab" data-section="branding">Branding</button></li>
+            <li class="tabs__item"><button class="tab" data-section="photography">Photography</button></li>
+            <li class="tabs__item"><button class="tab" data-section="illustration">Illustration</button></li>
+          </ul>
+        </div>
+
+        <div class="works__item" data-section="photography">
+          <img src="images/dest/works_3.jpg" alt="camera" class="works__image">
+          <b class="works__slogan">100 years<br>photography</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Photography</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="photography">
+          <img src="images/dest/works_1.jpg" alt="cat" class="works__image">
+          <b class="works__slogan">A kitten`s<br>life</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Photography</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="photography">
+          <img src="images/dest/works_4.jpg" alt="desktop with computer" class="works__image">
+          <b class="works__slogan">Groovemade<br>products for mac</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Photography</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="photography">
+          <img src="images/dest/works_2.jpg" alt="MacBook" class="works__image">
+          <b class="works__slogan">Apple`s<br>lost magic</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Photography</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="design">
+          <img src="images/dest/works_5.jpg" alt="desktop with computer" class="works__image">
+          <b class="works__slogan">Design<br>effects</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Web design</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="design">
+          <img src="images/dest/works_6.jpg" alt="there are pencils on the table" class="works__image">
+          <b class="works__slogan">Design<br>prodigies</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Web design</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="design">
+          <img src="images/dest/works_7.jpg" alt="desktop with computer" class="works__image">
+          <b class="works__slogan">Design<br>apple</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Web design</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="branding">
+          <img src="images/dest/works_8.jpg" alt="sneakers Puma" class="works__image">
+          <b class="works__slogan">Puma</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Branding</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="branding">
+          <img src="images/dest/works_9.jpg" alt="Coffee cup" class="works__image">
+          <b class="works__slogan">Starbucks</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Branding</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="branding">
+          <img src="images/dest/works_10.jpg" alt="sneakers Converse" class="works__image">
+          <b class="works__slogan">Converse</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Branding</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="branding">
+          <img src="images/dest/works_11.jpg" alt="computer Apple" class="works__image">
+          <b class="works__slogan">Apple Inc.</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Branding</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="illustration">
+          <img src="images/dest/works_12.jpg" alt="comera, MacBook and IPhone" class="works__image">
+          <b class="works__slogan">Apple`s<br>photos</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Illustration</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="illustration">
+          <img src="images/dest/works_13.jpg" alt="Old camera" class="works__image">
+          <b class="works__slogan">Old<br>photos</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Illustration</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__item" data-section="illustration">
+          <img src="images/dest/works_14.jpg" alt="girl with a camera" class="works__image">
+          <b class="works__slogan">Modern<br>photos</b>
+          <div class="works__wrapper">
+            <h3 class="works__title">Illustration</h3>
+            <p class="works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="" class="button works__button">Read more</a>
+          </div>
+        </div>
+
+        <div class="works__wrapper-button">
+          <button class="button works__button-show">View more</button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section section--bg-gray">
+
+      <div class="container">
+
+        <h2 class="title">The Team</h2>
+
+        <ul class="team">
+          <li class="team__item">
+            <img src="images/dest/team_1.jpg" alt="Photo Tom Jones" class="team__image">
+            <div class="team__wrapper">
+              <h3 class="team__name">Tom Jones</h3>
+              <span class="team__post">HR-manager</span>
+              <p class="team__text">Solve problems easily</p>
+            </div>
+          </li>
+          <li class="team__item">
+            <img src="images/dest/team_2.jpg" alt="Photo Michael Fraup" class="team__image">
+            <div class="team__wrapper">
+              <h3 class="team__name">Michael Fraup</h3>
+              <span class="team__post">Creative Director</span>
+              <p class="team__text">Create with simplicity!</p>
+            </div>
+          </li>
+          <li class="team__item">
+            <img src="images/dest/team_3.jpg" alt="Photo Tim Cahill" class="team__image">
+            <div class="team__wrapper">
+              <h3 class="team__name">Tim Cahill</h3>
+              <span class="team__post">Designer</span>
+              <p class="team__text">Рave more imagination</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <div class="section container">
+      <div class="comments">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide comments__item">
+            <p class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="comments__author">David James <span>/ Web Design</span></p>
+            <div class="comments__raiting">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star comments__star--opacity2">
+            </div>
+          </div>
+          <div class="swiper-slide comments__item">
+            <p class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="comments__author">Camron Manning <span>/ Web Design</span></p>
+            <div class="comments__raiting">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+            </div>
+          </div>
+          <div class="swiper-slide comments__item">
+            <p class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="comments__author">Austen Turner <span>/ Web Design</span></p>
+            <div class="comments__raiting">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star comments__star--opacity2">
+              <img src="images/dest/star.png" alt="raiting star" class="comments__star comments__star--opacity2">
+            </div>
+          </div>
+          ...
+        </div>
+
+        <div class="swiper-button-prev comments__navigation-button comments__navigation-button--prev"></div>
+        <div class="swiper-button-next comments__navigation-button comments__navigation-button--next"></div>
+      </div>
+    </div>
+
+    <div class="group-links">
+
+      <a href="#" class="group-links__link">
+        <div class="group-links__wrapper group-links__wrapper--work">
+          <b class="group-links__slogan">Want to work together?</b>
+          <p class="group-links__text">Amazing. Tell us about your project!</p>
+        </div>
+      </a>
+
+      <a href="#" class="group-links__link">
+        <div class="group-links__wrapper group-links__wrapper--contact">
+          <b class="group-links__slogan">Contact us</b>
+          <p class="group-links__text">Get in touch</p>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__wrapper">
+
+      <p class="footer__text">
+        <span>3rd Floor, Santa Monica Beach, CA, San Francisco</span><br>
+        <a href="tel:3590123456789" class="footer__link">(359) 0 123 456 789</a>
+         - 
+        <a href="mailto:info@yourmail.com" class="footer__link">info@yourmail.com</a>
+      </p>
+
+      <ul class="social">
+        <li class="social__item"><a href="#" class="social__link"><svg class="social__svg social__svg--left" aria-hidden="true" data-prefix="fab" data-icon="facebook-f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a></li>
+        <li class="social__item"><a href="#" class="social__link"><svg class="social__svg social__svg--w15" aria-hidden="true" data-prefix="fab" data-icon="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.72c.33 4.54.33 9.1.33 13.64 0 138.72-105.59 298.56-298.56 298.56-59.45 0-114.68-17.22-161.14-47.1 8.45.97 16.57 1.3 25.34 1.3 49.05 0 94.21-16.58 130.27-44.84a105.12 105.12 0 01-98.1-72.77c6.49.97 12.99 1.62 19.81 1.62 9.42 0 18.84-1.3 27.61-3.57A104.95 104.95 0 0120.8 195.57v-1.3a105.68 105.68 0 0047.43 13.32 104.86 104.86 0 01-46.78-87.39c0-19.49 5.2-37.36 14.3-52.95a298.27 298.27 0 00216.36 109.8c-1.62-7.8-2.6-15.91-2.6-24.03 0-57.83 46.78-104.94 104.94-104.94 30.2 0 57.5 12.67 76.67 33.14a206.6 206.6 0 0066.6-25.34 104.65 104.65 0 01-46.14 57.83c21.12-2.28 41.59-8.13 60.43-16.25a225.57 225.57 0 01-52.63 54.26z"/></svg></a></li>
+        <li class="social__item"><a href="#" class="social__link"><svg class="social__svg" aria-hidden="true" data-prefix="fab" data-icon="pinterest-p" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/></svg></a></li>
+      </ul>
+
+    </div>
+
+    <div class="author">
+      <a href="https://github.com/romasereda" class="author__link">
+        <svg class="author__svg" aria-hidden="true" data-prefix="fab" data-icon="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+        github.com/romasereda      
+      </a>
+
+    </div>
+
+  </footer>
+
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

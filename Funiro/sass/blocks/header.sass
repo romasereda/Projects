@@ -1,0 +1,584 @@
+.header
+  position: relative
+  padding-top: 40px
+  width: 100vw
+  min-height: 100vh
+  display: grid
+  grid-template-rows: max-content 1fr
+  gap: 56px
+  background-image: linear-gradient(90deg, #F9F1E6 67%, #FCF8F3 67%)
+  overflow-x: hidden
+
+.header__wrapper
+  display: flex
+  align-items: center
+
+.logo
+  width: 74px
+  display: flex
+  justify-content: center
+  &:hover,
+  &:focus
+    outline: none
+    & .logo__image path
+      fill: $accent
+
+.logo__image
+  width: 72px
+  height: 19px
+  & path
+    transition: 0.3s ease-out
+
+.navigation__list
+  margin-right: 43px
+  display: flex
+
+.navigation__item
+  margin-left: 40px
+
+.navigation__element
+  position: relative
+  padding: 0
+  font-weight: 500
+  font-size: 16px
+  line-height: 24px
+  color: $dark-extra
+  background-color: transparent
+  border: none
+  cursor: pointer
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+  &:hover .navigation__svg path,
+  &:focus .navigation__svg path
+    stroke: $accent
+  &--active
+    color: $accent
+    & .navigation__svg
+      transform: rotate(90deg)
+      & path
+          stroke: $accent
+
+.navigation__svg
+  margin-left: 11px
+  transition: 0.3s ease-out
+  & path
+    transition: 0.3s ease-out
+
+.navigation__drop-list
+  position: absolute
+  padding: 15px
+  padding-right: 35px
+  display: none
+  background-color: $accent
+  animation: showOpacity 0.5s ease-out forwards
+  z-index: 3
+
+@keyframes showOpacity
+  0%
+    opacity: 0   
+  100%
+    opacity: 1
+
+.navigation__drop-link
+  position: relative
+  color: #fff
+  transition: 0.3s ease-out
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: #fff
+    transition: transform 0.3s ease-out
+    transform: scaleX(0)
+    transform-origin: 100% 0
+  &:hover,
+  &:focus
+    outline: none
+    &::before
+        transform: scaleX(100%)
+        transform-origin: 0 100%
+
+
+.form-header
+  position: relative
+  flex-grow: 1
+  display: flex 
+
+.form-header__input
+  padding: 12px
+  padding-left: 44px
+  width: 100%
+  font-size: 14px
+  line-height: 21px
+  border: none
+  transition: 0.3s ease-out
+  &:hover + .form-header__svg path
+    stroke: $accent
+  &:focus + .form-header__svg path
+    stroke: #fff
+  &:focus
+    background-color: $accent
+    outline: none
+    color: #fff
+  &:focus::placeholder
+    color: #fff
+
+.form-header__svg
+  position: absolute
+  top: 12px
+  left: 12px
+  & path
+    transition: 0.3s ease-out
+
+.menu
+  margin-left: 121px
+  display: flex
+  align-items: center
+  gap: 32px
+
+.menu__link
+  display: flex
+  &:focus
+    outline: none
+  &:hover .menu__svg path,
+  &:hover .menu__svg circle,
+  &:focus .menu__svg path,
+  &:focus .menu__svg circle
+    stroke: $accent
+
+.menu__link--img
+  position: relative
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    height: 100%
+    background-color: $accent
+    border-radius: 50%
+    transform: translate3d(-50%, -50%, 0)
+    z-index: -1
+    transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    &::before
+      transform: translate3d(-50%, -50%, 0) scale(1.2)
+
+.menu__svg
+  & path,
+  & circle
+    transition: 0.3s ease-out
+
+.hamburger
+  display: none 
+
+.menu-popup
+  display: none
+
+.header__content
+  position: relative
+  padding-bottom: 6px
+  min-width: 0
+  display: flex 
+  justify-content: flex-end
+
+.slider-header
+  position: relative
+  left: 8px  
+  min-width: 0
+  width: 75.24%
+  height: 100%
+  padding-top: 75px
+
+.slider-header__item
+  position: relative
+  height: 100%
+
+.slider-header__image
+  position: absolute
+  top: 0  
+  left: 0 
+  width: 100%
+  height: 100%
+  object-fit: cover
+  object-position: center bottom
+
+.slider-header__wrapper
+  position: absolute
+  bottom: 40px
+  right: 40px
+  padding: 24px
+  display: none
+  flex-direction: column
+  width: 294px
+  min-height: 148px
+  z-index: 2
+  overflow: hidden  
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#fff, 0.7)
+    backdrop-filter: blur(12px)
+    z-index: -1
+
+.slider-header__name
+  margin-bottom: 4px
+  font-weight: 600
+  font-size: 28px
+  line-height: 33.6px
+  color: $dark-extra
+
+.slider-header__text
+  margin-bottom: 8px
+  font-size: 500px
+  font-size: 16px
+  line-height: 24px
+
+.slider-header__price
+  font-weight: 600  
+  font-size: 20px
+  line-height: 30px
+  color: $dark-extra
+
+.slider-header__link
+  position: absolute
+  bottom: 24px
+  right: 24px
+  width: 24px
+  height: 24px
+  display: flex 
+  justify-content: center
+  align-items: center
+  transition: 0.3s ease-out
+  & path
+    transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    transform: translateX(5px)
+  &:hover,
+  &:focus
+    outline: none
+    & path
+      fill: $accent
+
+.slider-header .slick-list
+  overflow: visible
+  height: 100%
+
+.slider-header .slick-track
+  display: flex
+  gap: 35px
+  height: 100%
+
+.slider-header .slick-prev
+  right: 64px
+  transform: rotate(180deg)
+
+.slider-header .slick-dots
+  position: absolute
+  top: 23px
+  left: 220px
+
+.header__block-text
+  position: absolute
+  left: 0
+  top: 0
+  padding: 60px 
+  width: 494px
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#fff, 0.7)
+    backdrop-filter: blur(31px)
+    z-index: -1
+  
+.header__title
+  margin: 0
+  margin-bottom: 16px
+  font-weight: 700  
+  font-size: 56px
+  line-height: 67.2px
+  color: $dark-extra
+
+.header__text
+  margin-bottom: 48px
+  font-weight: 500
+  font-size: 20px
+  line-height: 30px
+  color: $dark-lite
+
+.header__link
+  position: relative
+  display: block
+  height: 78px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 600
+  font-size: 20px
+  line-height: 30px
+  color: #fff
+  background-color: $accent
+  overflow: hidden
+  &::before
+    content: ""
+    position: absolute
+    left: -25%
+    top: 50%
+    width: 100%
+    height: 120%
+    transition: 0.3s ease-out
+    background-color: rgba(#fff, 0.3)
+    clip-path: ellipse(0% 25% at 0% 50%)
+    transform: translateY(-50%)
+  &:hover,
+  &:focus
+    &::before
+      clip-path: ellipse(100% 100% at 0% 50%)
+
+.header__link span
+  position: relative
+  z-index: 2
+
+@media (max-width: 1350px)
+
+  .slider-header .slick-dots
+    left: 50% 
+    transform: translateX(-50%)
+
+@media (max-width: 1300px)
+  
+  .header
+    gap: 40px
+
+  .menu
+    margin-left: 80px 
+
+@media (max-width: 1200px)
+  
+  .navigation__list
+    margin-right: 20px
+
+  .navigation__item
+    margin-left: 20px 
+
+  .navigation__svg
+    margin-left: 5px
+
+  .menu
+    margin-left: 50px
+    gap: 15px
+
+  .header__block-text
+    padding: 40px
+    width: 400px
+
+  .header__title
+    margin-bottom: 10px
+    font-size: 45px
+    line-height: 55px
+
+  .header__text
+    margin-bottom: 30px
+    font-size: 16px
+    line-height: 20px
+
+  .header__link
+    height: 60px
+    font-size: 16px 
+    line-height: 20px
+
+@media (max-width: 1024px)
+
+  .header
+    padding-top: 25px
+    gap: 25px
+
+  .navigation__element
+    font-size: 14px
+    line-height: 20px
+
+  .menu
+    margin-left: 25px
+
+  .slider-header__wrapper
+    padding: 15px
+    width: 230px
+    min-height: 110px
+
+  .slider-header__link
+    bottom: 15px
+    right: 15px
+
+  .slider-header__name
+    font-size: 22px
+    line-height: 26px
+
+  .slider-header__text
+    font-size: 14px
+    line-height: 18px
+
+  .slider-header__price
+    font-size: 18px
+    line-height: 22px
+
+@media (max-width: 900px)
+
+  .slider-header .slick-dots
+    left: auto
+    right: 170px  
+    transform: translateX(0%)
+
+@media (max-width: 820px)
+
+  .navigation
+    display: none
+
+  .form-header
+    display: none 
+
+  .menu
+    margin-left: auto
+
+  .hamburger
+    position: relative
+    margin-left: 20px
+    padding: 0
+    display: flex
+    z-index: 4
+
+  .hamburger.is-active
+    & .hamburger-inner
+      background-color: #fff
+      transition: 0.3s ease-out
+      &::before,
+      &::after
+        background-color: #fff
+        transition: 0.3s ease-out
+
+  .hamburger-inner
+    background-color: $dark-extra
+    &::before,
+    &::after
+      background-color: $dark-extra
+
+  .menu-popup
+    position: absolute
+    left: 0
+    top: 0
+    padding-left: 40px
+    width: 100vw
+    min-height: 100vh
+    align-items: center 
+    background-color: $accent
+    z-index: 3
+    transition: 0.5s
+
+  .menu-popup__list-small
+    margin-left: 20px
+    margin-bottom: 20px 
+
+  .menu-popup__link
+    color: #F9F1E6
+    text-decoration: underline  
+    font-size: 16px 
+
+  .menu-popup__item,
+  .menu-popup__link--big
+    font-size: 18px
+    color: #fff
+
+@media (max-width: 780px)
+
+  .header
+    display: block
+    min-height: auto
+
+  .header__content
+    display: flex
+    flex-direction: column-reverse
+
+  .header__block-text
+    position: static
+    padding: 0
+    margin-bottom: 20px
+    width: 90%
+    &::before
+      display: none
+
+  .slider-header
+    left: -10px
+    padding-top: 0
+    padding-bottom: 60px
+    width: 90%
+    height: 300px
+
+  .header__link
+    max-width: 300px  
+
+  .slider-header .slick-track
+    gap: 10px
+
+  .slider-header .slick-arrow
+    top: auto
+    bottom: 3px
+    right: -50px
+
+  .slider-header .slick-prev
+    right: 10px
+
+  .slider-header .slick-dots
+    top: auto
+    left: 16px
+    bottom: 20px 
+
+  .slider-header__wrapper
+    bottom: 20px
+    right: 20px 
+
+@media (max-width: 600px)
+
+  .slider-header
+    height: 270px
+
+  .slider-header__wrapper
+    padding: 15px
+    width: 170px
+    min-height: auto
+
+  .slider-header__text
+    display: none
+
+  .slider-header__price
+    display: none
+
+@media (max-width: 520px)
+
+  .slider-header
+    height: 230px
+
+  .header__title
+    margin-bottom: 5px 
+    margin-top: 15px
+    font-size: 35px
+    line-height: 40px
+
+  .header__text
+    margin-bottom: 15px

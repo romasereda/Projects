@@ -1,0 +1,126 @@
+.footer
+  margin-top: 80px
+  font-size: 14px
+
+.footer__block-top
+  margin-bottom: 60px
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 30px
+
+.footer__block
+  display: grid
+  grid-auto-rows: min-content
+  align-items: start
+
+.footer__wrapper
+  padding-top: 30px
+  border-top: 1px solid $textcolor
+
+.footer__title
+  margin: 0
+  padding-bottom: 8px
+  text-transform: uppercase
+  font-weight: normal
+  font-size: 18px
+  letter-spacing: 1px
+
+.footer__link
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  text-decoration: none
+  color: $textcolor
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+  &:hover path,
+  &:focus path
+    fill: $accent
+  &--margin0
+    margin: 0
+
+
+.footer__text
+  margin: 0
+  margin-bottom: 20px
+
+.footer__image-card
+  width: 45px
+  height: 30px
+  margin-right: 20px
+
+.footer__svg
+  margin-right: 20px
+  &--margin
+    margin: 0 5px
+  & path
+    transition: 0.5s
+
+.social--footer
+  padding-top: 0
+  justify-content: start
+
+.social__item--footer
+  margin-right: 10px
+  transform: scale(0.85)
+
+.social__link--footer
+  & path
+    fill : $textcolor
+
+.footer__block-bottom
+  padding: 20px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  gap: 30px
+  border-top: 1px solid $textcolor
+
+@media (max-width: 1200px)
+  .social__item--footer
+    margin-right: 0
+    transform: scale(0.7)
+
+@media (max-width: 1024px)
+  .footer
+    margin-top: 40px
+
+  .footer__block-top
+    margin-bottom: 40px
+
+  .footer__title
+    letter-spacing: 0
+
+  .social__item--footer
+    margin-right: 0
+    transform: scale(0.6)
+
+@media (max-width: 895px)
+  .footer__block
+    grid-template-rows: 52px
+
+  .footer__svg
+    margin-right: 5px
+
+@media (max-width: 805px)
+  .footer__block-bottom
+    justify-content: center
+
+@media (max-width: 768px)
+  .footer__block-top
+    margin-bottom: 0
+    grid-template-columns: repeat(2, 1fr)
+
+  .footer__block
+    grid-template-rows: min-content
+
+  .footer__wrapper
+    padding-top: 15px
+
+@media (max-width: 470px)
+  .footer__block-top
+    grid-template-columns: 1fr

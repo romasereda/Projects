@@ -1,0 +1,52 @@
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 20px
+  text-decoration: none
+  text-transform: uppercase
+  font-size: 12px
+  line-height: 20px
+  font-weight: bold
+  color: $white
+  background-color: $accent
+  border: 1px solid $accent
+  border-radius: 5px
+  transition: 0.5s
+  cursor: pointer
+  &:hover,
+  &:focus
+    background-color: transparent
+    border-color: $accent
+    outline: none
+    color: $black
+  &--header
+    min-width: 200px
+    &:hover,
+    &:focus
+      color: $white
+  &--transparent
+    background-color: transparent
+    border-color: $white-tr
+    &:hover,
+    &:focus
+      background-color: $accent
+      border-color: $accent
+  &--span2
+    grid-column: span 2
+  &--contact
+    grid-column: span 3
+
+@media (max-width: 1024px)
+  .button--contact
+    grid-column: span 6
+
+@media (max-width: 900px)
+  .button
+    padding: 14px
+    &--header
+      min-width: 160px
+
+@media (max-width: 500px)
+  .button--span2
+    grid-column: 100%

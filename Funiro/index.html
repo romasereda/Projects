@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="images/dest/favicon.ico">
+
+  <meta name="theme-color" content="E89F71">
+
+  <title>Funiro.</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <header class="header">
+
+    <div class="header__wrapper container">
+
+      <a href="#" class="logo">
+        <svg class="logo__image" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6 4.37V1.2H.55V18h3.31v-6.48h6.53V8.35H3.87V4.37h6.72zM20.77 6v6.48c0 2.09-1.13 2.98-2.64 2.98-1.4 0-2.37-.84-2.37-2.48V6h-3.1v7.37c0 3.19 2 4.97 4.54 4.97 1.6 0 2.85-.6 3.57-1.68V18h3.1V6h-3.1zm12.6-.34c-1.6 0-2.85.6-3.57 1.68V6h-3.1v12h3.1v-6.48c0-2.09 1.13-2.98 2.64-2.98 1.4 0 2.37.84 2.37 2.48V18h3.1v-7.37c0-3.19-2-4.97-4.54-4.97zm8.72-1.1c1.06 0 1.92-.86 1.92-1.9 0-1.03-.86-1.92-1.92-1.92-1.03 0-1.9.9-1.9 1.92 0 1.04.87 1.9 1.9 1.9zM40.56 18h3.1V6h-3.1v12zm9.03-9.94V6h-3.1v12h3.1v-5.74c0-2.52 2.04-3.24 3.65-3.04V5.76c-1.51 0-3.03.67-3.65 2.3zm10.73 10.28A6.29 6.29 0 0066.68 12a6.29 6.29 0 00-6.36-6.34A6.27 6.27 0 0053.98 12c0 3.58 2.8 6.34 6.34 6.34zm0-3.03A3.19 3.19 0 0157.08 12a3.19 3.19 0 013.24-3.31A3.2 3.2 0 0163.58 12a3.2 3.2 0 01-3.26 3.31zm9.37 3a2.04 2.04 0 100-4.07 2.04 2.04 0 000 4.07z" fill="#000"/></svg>
+      </a>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <button class="navigation__element navigation__element--drop">
+              Products
+              <svg class="navigation__svg" width="14" height="9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 1.5L7 7.33 1.17 1.5" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="navigation__drop-list">
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Syltherine</a>
+              </li>
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Leviose</a>
+              </li>
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Lolito</a>
+              </li>
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Respira</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <button class="navigation__element navigation__element--drop">
+              Rooms
+              <svg class="navigation__svg" width="14" height="9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 1.5L7 7.33 1.17 1.5" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="navigation__drop-list">
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Inner peace</a>
+              </li>
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Cosinnes</a>
+              </li>
+              <li class="navigation__drop-item">
+                <a href="#" class="navigation__drop-link">Calm</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__element">Inspirations</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form action="#" class="form-header">
+        <input type="text" class="form-header__input" name="search" placeholder="Search for minimalist chair">
+        <svg class="form-header__svg" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.67 16.67l-4.09-4.09m0 0a5.4 5.4 0 00-3.83-9.25 5.42 5.42 0 103.83 9.25z" stroke="#333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </form>
+
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg" width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#262F56" stroke-width="1.8"/></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 2.5h1.65c.48 0 .72 0 .92.09a1 1 0 01.42.35c.12.18.16.41.24.89L4.61 6m0 0l.88 5.08c.18 1.03.27 1.54.54 1.91a2 2 0 00.93.72c.43.16.95.1 2 0l9.65-.93c1.02-.1 1.53-.15 1.91-.38a2 2 0 00.79-.86c.19-.4.19-.92.19-1.94v0c0-1.08 0-1.63-.2-2.05a2 2 0 00-.86-.87c-.41-.22-.95-.24-2.04-.27L4.6 6z" stroke="#262F56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="19" r="2" stroke="#262F56" stroke-width="1.8"/><circle cx="18" cy="19" r="2" stroke="#262F56" stroke-width="1.8"/></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link menu__link--img">
+            <img src="images/dest/menu__image.png" alt="wooman" class="menu__image">
+          </a>
+        </li>
+      </ul>
+
+      <button class="hamburger hamburger--arrowalt" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    </div>
+
+    <div class="header__content container">
+      
+      <div class="slider-header">
+        <div class="slider-header__item">
+          <img src="images/dest/header_1.jpg" alt="Bohauss - luxury big sofa 2-seat" class="slider-header__image">
+          <div class="slider-header__wrapper">
+            <span class="slider-header__name">Bohauss</span>
+            <span class="slider-header__text">Luxury big sofa 2-seat</span>
+            <span class="slider-header__price">Rp 17.000.000</span>
+            <a href="#" class="slider-header__link">
+              <svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.37 6.56l-4.98 5a.79.79 0 01-.56.24c-.2 0-.4-.08-.56-.24a.8.8 0 010-1.14l3.62-3.64H1.2a.8.8 0 01-.8-.8c0-.44.36-.8.8-.8h11.68L9.27 1.54a.8.8 0 010-1.14.8.8 0 011.14 0l4.98 5c.3.34.3.86-.02 1.16z" fill="#000"/></svg>
+            </a>  
+          </div>
+        </div>
+        <div class="slider-header__item">
+          <img src="images/dest/header_2.jpg" alt="Lolito - luxurious double bed" class="slider-header__image">
+          <div class="slider-header__wrapper">
+            <span class="slider-header__name">Lolito</span>
+            <span class="slider-header__text">Luxurious double bed</span>
+            <span class="slider-header__price">Rp 29.000.000</span>
+            <a href="#" class="slider-header__link">
+              <svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.37 6.56l-4.98 5a.79.79 0 01-.56.24c-.2 0-.4-.08-.56-.24a.8.8 0 010-1.14l3.62-3.64H1.2a.8.8 0 01-.8-.8c0-.44.36-.8.8-.8h11.68L9.27 1.54a.8.8 0 010-1.14.8.8 0 011.14 0l4.98 5c.3.34.3.86-.02 1.16z" fill="#000"/></svg>
+            </a>  
+          </div>
+        </div>
+        <div class="slider-header__item">
+          <img src="images/dest/header_3.jpg" alt="Syltherine - beautiful home sofa" class="slider-header__image">
+          <div class="slider-header__wrapper">
+            <span class="slider-header__name">Syltherine</span>
+            <span class="slider-header__text">Beautiful home sofa</span>
+            <span class="slider-header__price">Rp 14.000.000</span>
+            <a href="#" class="slider-header__link">
+              <svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.37 6.56l-4.98 5a.79.79 0 01-.56.24c-.2 0-.4-.08-.56-.24a.8.8 0 010-1.14l3.62-3.64H1.2a.8.8 0 01-.8-.8c0-.44.36-.8.8-.8h11.68L9.27 1.54a.8.8 0 010-1.14.8.8 0 011.14 0l4.98 5c.3.34.3.86-.02 1.16z" fill="#000"/></svg>
+            </a>  
+          </div>
+        </div>
+        <div class="slider-header__item">
+          <img src="images/dest/header_4.jpg" alt="Potty - original sofa" class="slider-header__image">
+          <div class="slider-header__wrapper">
+            <span class="slider-header__name">Potty</span>
+            <span class="slider-header__text">Original sofa</span>
+            <span class="slider-header__price">Rp 15.000.000</span>
+            <a href="#" class="slider-header__link">
+              <svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.37 6.56l-4.98 5a.79.79 0 01-.56.24c-.2 0-.4-.08-.56-.24a.8.8 0 010-1.14l3.62-3.64H1.2a.8.8 0 01-.8-.8c0-.44.36-.8.8-.8h11.68L9.27 1.54a.8.8 0 010-1.14.8.8 0 011.14 0l4.98 5c.3.34.3.86-.02 1.16z" fill="#000"/></svg>
+            </a>  
+          </div>
+        </div>
+      </div>
+
+      <div class="header__block-text">
+        <h1 class="header__title">High-Quality Furniture Just For You</h1>
+        <p class="header__text">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+        <a href="#" class="header__link"><span>Shop Now</span></a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <ul class="features container">
+      <li class="features__item features__item--1">
+        <span class="features__name">High Quality</span>
+        <span class="features__text">crafted from top materials</span>
+      </li>
+      <li class="features__item features__item--2">
+        <span class="features__name">Warrany Protection</span>
+        <span class="features__text">Over 2 years</span>
+      </li>
+      <li class="features__item features__item--3">
+        <span class="features__name">Free Shipping</span>
+        <span class="features__text">Order over 150 $</span>
+      </li>
+      <li class="features__item features__item--4">
+        <span class="features__name">24 / 7 Support</span>
+        <span class="features__text">Dedicated support</span>
+      </li>
+    </ul>
+
+    <section class="container">
+
+      <h2 class="title title--margin32">Our Products</h2>
+
+      <ul class="products">
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_1.jpg" alt="Syltherine" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Syltherine</h3>
+            <span class="products__text">Stylish cafe chair</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 2.500.000</span>
+              <span class="products__old-price">Rp 3.500.000</span>
+            </div>
+            <div class="products__discount">
+              <span>-30%</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_2.jpg" alt="Leviosa" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Leviosa</h3>
+            <span class="products__text">Stylish cafe chair</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 2.500.000</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_3.jpg" alt="Lolito" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Lolito</h3>
+            <span class="products__text">Luxury big sofa</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 7.000.000</span>
+              <span class="products__old-price">Rp 14.000.000</span>
+            </div>
+            <div class="products__discount">
+              <span>-50%</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_4.jpg" alt="Respira" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Respira</h3>
+            <span class="products__text">Minimalist fan</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 500.000</span>
+            </div>
+            <div class="products__discount products__discount--bg-green">
+              <span>New</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_5.jpg" alt="Grifo" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Grifo</h3>
+            <span class="products__text">Night lamp</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 1.500.000</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_6.jpg" alt="Muggo" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Muggo</h3>
+            <span class="products__text">Small mug</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 150.000</span>
+            </div>
+            <div class="products__discount products__discount--bg-green">
+              <span>New</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_7.jpg" alt="Pingky" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Pingky</h3>
+            <span class="products__text">Cute bed set</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 7.000.000</span>
+              <span class="products__old-price">Rp 14.000.000</span>
+            </div>
+            <div class="products__discount">
+              <span>-50%</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_8.jpg" alt="Potty" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Potty</h3>
+            <span class="products__text">Minimalist flower pot</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 500.000</span>
+            </div>
+            <div class="products__discount products__discount--bg-green">
+              <span>New</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_9.jpg" alt="Table" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Table</h3>
+            <span class="products__text">Minimalist table</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 3.500.000</span>
+            </div>
+            <div class="products__discount products__discount--bg-green">
+              <span>New</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_10.jpg" alt="Sofa" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Sofa</h3>
+            <span class="products__text">Beautiful wooden sofa</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 6.000.000</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_11.jpg" alt="Cozy sofa" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Cozy sofa</h3>
+            <span class="products__text">White cozy sofa</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 5.000.000</span>
+              <span class="products__old-price">Rp 10.000.000</span>
+            </div>
+            <div class="products__discount">
+              <span>-50%</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__wrapper-image">
+            <img src="images/dest/products_12.jpg" alt="Work table" class="products__image">
+          </div>
+          <div class="products__wrapper-text">
+            <h3 class="products__name">Work table</h3>
+            <span class="products__text">Minimalistic comfortable</span>
+            <div class="products__wrapper-price">
+              <span class="products__price">Rp 7.000.000</span>
+            </div>
+          </div>
+          <div class="products__wrapper-emergin">
+            <button class="products__button-big">Add to cart</button>
+            <div class="products__wrapper-button">
+              <button class="products__button">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 16c-.79 0-1.5.31-2.03.8L8.9 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 0021 5a3 3 0 10-5.91.7L8.04 9.81A2.99 2.99 0 003 12a3 3 0 005.04 2.19l7.05 4.12a2.98 2.98 0 00.42 2.36A3 3 0 1018 16z" fill="#fff"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="products__button">
+                <svg width="24" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.05C-8 8 6-4 12 3.6 18-4 32 8 12 19.05z" stroke="#fff" stroke-width="1.8"/></svg>
+                <span>Like</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <button class="button-show">Show More</button>
+
+    </section>
+
+    <section class="rooms">
+      <div class="container rooms__container">  
+
+        <div class="rooms__block-text">
+          <h2 class="title rooms__title">50+ Beautiful rooms inspiration</h2>
+          <p class="rooms__text">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+          <a href="#" class="rooms__link">Explore More</a>
+        </div>
+        
+        <div class="rooms__block-slider">
+          <div class="slider-rooms">
+            <div class="slider-rooms__item">
+              <img src="images/dest/rooms_1.jpg" alt="Bed Room" class="slider-rooms__image">
+              <div class="slider-rooms__wrapper">
+                <p class="slider-rooms__text">
+                  <span class="slider-rooms__index">01</span>
+                  <span class="slider-rooms__category">Bed Room</span>
+                </p>
+                <span class="slider-rooms__name">Inner Peace</span>
+                <a href="#" class="slider-rooms__link"></a>
+              </div>
+            </div>
+            <div class="slider-rooms__item">
+              <img src="images/dest/rooms_2.jpg" alt="Kitchen" class="slider-rooms__image">
+              <div class="slider-rooms__wrapper">
+                <p class="slider-rooms__text">
+                  <span class="slider-rooms__index">02</span>
+                  <span class="slider-rooms__category">Kitchen</span>
+                </p>
+                <span class="slider-rooms__name">Comfort</span>
+                <a href="#" class="slider-rooms__link"></a>
+              </div>
+            </div>
+            <div class="slider-rooms__item">
+              <img src="images/dest/rooms_3.jpg" alt="Parlour" class="slider-rooms__image">
+              <div class="slider-rooms__wrapper">
+                <p class="slider-rooms__text">
+                  <span class="slider-rooms__index">03</span>
+                  <span class="slider-rooms__category">Parlour</span>
+                </p>
+                <span class="slider-rooms__name">Cosiness</span>
+                <a href="#" class="slider-rooms__link"></a>
+              </div>
+            </div>
+            <div class="slider-rooms__item">
+              <img src="images/dest/rooms_4.jpg" alt="Lounge" class="slider-rooms__image">
+              <div class="slider-rooms__wrapper">
+                <p class="slider-rooms__text">
+                  <span class="slider-rooms__index">04</span>
+                  <span class="slider-rooms__category">Lounge</span>
+                </p>
+                <span class="slider-rooms__name">Сomfortably</span>
+                <a href="#" class="slider-rooms__link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="tips container">
+
+      <h2 class="tips__title title">Tips & Tricks</h2>
+
+      <div class="slider-tips">
+        <a href="#" class="slider-tips__item"> 
+          <div class="slider-tips__wrapper-image">
+            <img src="images/dest/tips_1.jpg" alt="family sitting on the couch" class="slider-tips__image">
+          </div>
+          <div class="slider-tips__wrapper-text">
+            <h3 class="slider-tips__title">How to create a living room to love</h3>
+            <time class="slider-tips__time" datetime="2020-01-20">20 jan 2020</time>    
+          </div>
+        </a>
+        <a href="#" class="slider-tips__item"> 
+          <div class="slider-tips__wrapper-image">
+            <img src="images/dest/tips_2.jpg" alt="table" class="slider-tips__image">
+          </div>
+          <div class="slider-tips__wrapper-text">
+            <h3 class="slider-tips__title">Solution for clean look working space</h3>
+            <time class="slider-tips__time" datetime="2020-01-10">10 jan 2020</time>                
+          </div>
+        </a>
+        <a href="#" class="slider-tips__item"> 
+          <div class="slider-tips__wrapper-image">
+            <img src="images/dest/tips_3.jpg" alt="kitchen" class="slider-tips__image">
+          </div>
+          <div class="slider-tips__wrapper-text">
+            <h3 class="slider-tips__title">Make your cooking activity more fun with good setup</h3>
+            <time class="slider-tips__time" datetime="2020-01-20">20 jan 2020</time>                
+          </div>
+        </a>
+        <a href="#" class="slider-tips__item"> 
+          <div class="slider-tips__wrapper-image">
+            <img src="images/dest/tips_4.jpg" alt="woman arranges furniture" class="slider-tips__image">
+          </div>
+          <div class="slider-tips__wrapper-text">
+            <h3 class="slider-tips__title">Equip your home for comfort and convenience</h3>
+            <time class="slider-tips__time" datetime="2020-01-15">15 jan 2020</time>                
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div class="wrapper-title">
+        <span class="subtitle">Share your setup with</span>
+        <h2 class="title">#FuniroFurniture</h2>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <div class="footer__column footer__column--weight400">
+      <h3 class="footer__title">Funiro.</h3>
+      <p class="footer__text">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
+      <a href="#" class="footer__link">
+        <svg class="footer__svg" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.97 18.54c2.12-1.44 6.95-5.24 6.95-9.79a7.92 7.92 0 10-15.84 0c0 4.55 4.83 8.35 6.95 9.8.59.4 1.35.4 1.94 0zM10 11.25a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="#898989"/></svg>
+        Sawojajar Malang, Indonesia
+      </a>
+      <a href="#" class="footer__link">
+        <svg class="footer__svg" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.43 13.07l-.51.77a.75.75 0 01-.42.33c-.6.16-2.15.23-4.52-2.15C5.6 9.65 5.68 8.1 5.83 7.5a.75.75 0 01.33-.42l.77-.51c.58-.38.73-1.16.35-1.74L5.82 2.64c-.33-.5-.98-.7-1.54-.46l-.65.29c-.5.21-.91.6-1.16 1.08-.2.41-.36.84-.38 1.3-.07 1.43.25 4.95 4.18 8.88 3.93 3.93 7.45 4.25 8.89 4.18.45-.02.88-.18 1.29-.38a2.3 2.3 0 001.08-1.16l.29-.65c.23-.56.04-1.2-.46-1.54l-2.2-1.46a1.25 1.25 0 00-1.73.35z" fill="#898989"/></svg>
+        +6289 456 3455
+      </a>
+      <a href="https://github.com/romasereda" class="footer__link">
+        <svg class="footer__svg footer__svg--github" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M19 30h-8v-4c-5.47 1.18-7-3-7-3-1-2-2-3-2-3-2-1.19 0-1 0-1 2 0 3 2 3 2a4.75 4.75 0 006 2c0-1 .44-2.51 1-3-4.36-.5-8-3-8-8s1-6 2-7c-.2-.5-1.04-2.31.04-5C6.04 0 8 0 10 3c1-1 4-1 5-1s4 0 5 1c2-3 3.97-3 3.97-3 1.07 2.69.23 4.5.03 5 1 1 2 2 2 7s-3.63 7.5-8 8c.56.49 1 2.21 1 3v7z" fill="#898989" fill-rule="evenodd"/></svg>
+        github.com/romasereda
+      </a>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Menu</h3>
+      <a href="#" class="footer__link">Products</a>
+      <a href="#" class="footer__link">Rooms</a>
+      <a href="#" class="footer__link">Inspirations</a>
+      <a href="#" class="footer__link">About Us</a>
+      <a href="#" class="footer__link">Terms & Policy</a>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Account</h3>
+      <a href="#" class="footer__link">My Account</a>
+      <a href="#" class="footer__link">Checkout</a>
+      <a href="#" class="footer__link">My Cart</a>
+      <a href="#" class="footer__link">My catalog</a>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Stay Connected</h3>
+      <a href="#" class="footer__link">Facebook</a>
+      <a href="#" class="footer__link">Instagram</a>
+      <a href="#" class="footer__link">Twitter</a>
+    </div>
+    <div class="footer__column">
+      <h3 class="footer__title">Stay Updated</h3>
+      <form action="#" class="form-footer">
+        <input class="form-footer__input" type="email" placeholder="Enter your email">
+        <button class="form-footer__button">
+          <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.78.22A.75.75 0 0017 .04l-16.5 6a.75.75 0 000 1.4l6.45 2.58 4.75-4.77 1.06 1.06-4.78 4.77 2.58 6.45a.75.75 0 00.7.47.75.75 0 00.69-.5l6-16.5a.75.75 0 00-.16-.78z" fill="#fff"/></svg>
+        </button>
+      </form>
+    </div>
+  </footer>
+
+  <nav class="menu-popup">
+    <ul class="menu-popup__list">
+      <li class="menu-popup__item">
+        Products
+        <ul class="menu-popup__list-small">
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Syltherine</a></li>
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Leviose</a></li>
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Lolito</a></li>
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Respira</a></li>
+        </ul>
+      </li>
+      <li class="menu-popup__item">
+        Rooms
+        <ul class="menu-popup__list-small">
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Inner peace</a></li>
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Cosinnes</a></li>
+          <li class="menu-popup__item-small"><a href="#" class="menu-popup__link">Calm</a></li>
+        </ul>
+      </li>
+      <li class="menu-popup__item">
+        <a href="#" class="menu-popup__link menu-popup__link--big">Inspirations</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

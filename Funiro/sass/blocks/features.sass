@@ -1,0 +1,65 @@
+.features
+  margin-top: 88px  
+  margin-bottom: 88px
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  justify-content: space-between
+
+.features__item
+  padding-left: 85px
+  min-height: 85px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background-repeat: no-repeat
+  background-position: 22px center
+
+@for $i from 1 through 4
+  .features__item--#{$i} 
+    background-image: url("../images/dest/features_#{$i}.svg")
+
+.features__name
+  margin-bottom: 2px
+  font-weight: 600
+  font-size: 18px
+  line-height: 27px
+  color: $dark-extra
+
+.features__text
+  font-weight: 500
+  font-size: 18px
+  line-height: 24px
+  color: $dark-lite
+
+@media (max-width: 1200px)
+
+  .features
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 1024px)
+
+  .features
+    margin-top: 40px  
+    margin-bottom: 40px
+    gap: 5px
+
+@media (max-width: 700px)
+
+  .features__name
+    font-size: 16px 
+    line-height: 20px
+
+  .features__text
+    font-size: 14px 
+    line-height: 18px
+
+@media (max-width: 625px)
+
+  .features
+    grid-template-columns: 100%
+    gap: 0
+
+  .features__item
+    min-height: 70px

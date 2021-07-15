@@ -1,0 +1,66 @@
+.contacts__title
+  margin: 0
+  margin-bottom: 40px
+  font-size: 24px
+  font-weight: normal
+  text-align: center
+  letter-spacing: 1px
+
+.contacts__block-list
+  padding-bottom: 40px
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 30px
+  border-bottom: 1px solid $colorborder
+
+.contacts__block-title
+  margin: 0
+  margin-bottom: 25px
+  font-size: 18px
+  font-weight: normal
+
+.contacts__list
+  padding-left: 30px
+  background-repeat: no-repeat
+  &--bg-marker
+    background-image: url("../images/dest/contacts_1.svg")
+  &--bg-tel
+    background-image: url("../images/dest/contacts_2.svg")
+  &--bg-mail
+    background-image: url("../images/dest/contacts_3.svg")
+    background-position: left 4px
+
+.contacts__item
+  margin-bottom: 15px
+  font-size: 14px
+
+.contacts__link
+  color: $textcolor
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+
+.contacts__map
+  margin-top: 60px
+  width: 100%
+  display: block
+
+@media (max-width: 1024px)
+  .contacts__block-list
+    padding-bottom: 15px
+
+@media (max-width: 900px)
+  .contacts__block-list
+    grid-template-columns: repeat(2, 1fr)
+
+  .contacts__map
+    margin-top: 40px
+
+@media (max-width: 500px)
+  .contacts__block-list
+    grid-template-columns: 1fr
+
+  .contacts__block-title
+    margin-bottom: 5px

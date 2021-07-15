@@ -1,0 +1,28 @@
+.block-link
+  display: grid
+  grid-template-columns: repeat(4, minmax(max-content, 225px))
+  gap: 30px
+  justify-content: space-between
+  color: #fff
+
+.block-link__list
+  display: flex
+  flex-direction: column
+  gap: 15px
+
+.block-link__link
+  color: #fff
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $yellow
+    text-decoration: underline
+
+@media (max-width: 1090px)
+  .block-link
+    grid-template-columns: repeat(2, minmax(max-content, 225px))
+    justify-content: space-evenly
+
+@media (max-width: 580px)
+  .block-link
+    grid-template-columns: 100%

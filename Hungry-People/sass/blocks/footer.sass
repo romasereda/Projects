@@ -1,0 +1,23 @@
+.footer
+  height: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+  background-color: rgba(0, 0, 0, 0.9)
+
+.author__link
+  display: flex
+  align-items: center
+  grid-gap: 15px
+  text-decoration: none
+  color: rgba(#ffffff, 0.5)
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+  & path
+    transition: 0.5s
+  &:hover path,
+  &:focus path
+    fill: $accent

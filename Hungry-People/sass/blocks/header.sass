@@ -1,0 +1,189 @@
+.header
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  background-color: #0B0905
+  background-image: url("../images/dest/header-bg.jpg")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  transition: 0.5s
+  & .container
+    flex-grow: 1
+
+.header__logo
+  position: absolute
+  top: 25px
+  left: 50%
+  width: 150px
+  height: 150px
+  transform: translateX(-50%)
+
+.navigation
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 220px
+  transition: 0.5s
+  
+.menu
+  &--fixed
+    width: 100%
+    position: fixed
+    background-color: rgba(#000000, 0.7)
+    z-index: 10
+    & .navigation
+      gap: 0
+    & .navigation__list
+      border-bottom: none
+
+.navigation__list
+  padding: 32px 0 30px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  border-bottom: 1px solid $white-tr
+
+.navigation__link
+  display: block
+  margin: 10px
+  text-decoration: none
+  text-transform: uppercase
+  font-size: 12px
+  line-height: 18px
+  font-weight: bold
+  color: $white
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+
+.header-content
+  position: relative
+  display: inline-grid
+  grid-template-rows: 1fr min-content 1fr
+  margin: 0 auto
+  padding: 0 35px
+  max-width: 850px
+  color: $white
+  border-left: 1px solid $white-tr
+  border-right: 1px solid $white-tr
+  &::before
+    content: ""
+    position: absolute
+    left: calc(50% - 0.5px)
+    bottom: 0
+    width: 1px
+    height: calc(100% - 100px)
+    background-color: $white-tr
+
+
+.header-content__wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+
+.header-content__wrapper-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.header-content__wrapper-button
+  display: flex
+  gap: 40px
+
+.header-content__button
+  position: relative
+  display: block
+  margin: 20px
+  padding: 10px
+  width: 60px
+  height: 60px
+  background-clip: content-box
+  border: 1px solid $white-tr
+  border-radius: 50%
+  transition: 0.5s
+  cursor: pointer
+  z-index: 2
+  & path
+    transition: 0.5s
+  &:hover,
+  &:focus
+    background-color: $accent
+    outline: none
+    & path
+      fill: $white
+
+.social
+  position: absolute
+  right: 40px
+  top: 50%
+  display: flex
+  flex-direction: column
+  gap: 20px
+  transform: translateY(-50%)
+
+.social__link
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 60px
+  height: 60px
+  border: 1px solid $white-tr
+  border-radius: 50%
+  transition: 0.5s
+  &:hover,
+  &:focus
+    background-color: $accent
+    outline: none
+    
+.header__text-bg
+  position: absolute
+  left: 40px
+  top: 50%
+  font-size: 12px
+  font-weight: bold
+  color: $white
+  transform-origin: 0 0
+  transform: rotate(-90deg) translateX(-50%)
+
+@media (max-width: 768px)
+  .navigation
+    gap: 160px
+
+  .navigation__list
+    border: none
+
+  .social
+    display: none
+  
+  .header__text-bg
+    display: none
+
+  .header-content
+    margin: 0 auto
+    padding: 0
+    border: none
+    &::before
+      display: none
+
+  .header__logo
+    width: 120px
+    height: 120px
+
+  .menu
+    &--fixed
+      width: 100%
+      position: fixed
+      background-color: rgba(#000000, 0.7)
+      z-index: 10
+      & .navigation
+        gap: 0
+      & .navigation__list
+        padding: 12px 0
+
+@media (max-width: 560px)
+  .header-content__wrapper-button
+    flex-direction: column
+    gap: 20px

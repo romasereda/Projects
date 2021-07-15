@@ -1,0 +1,48 @@
+.events__wrapper-top
+  margin-bottom: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.events__wrapper-content
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 30px
+
+.events__image
+  margin-bottom: 15px
+  width: 100%
+
+.events__date
+  margin-bottom: 5px
+  display: block
+  font-size: 14px
+
+.events__name
+  margin: 0
+  margin-bottom: 10px
+
+.events__link
+  font-size: 21px
+  font-weight: 500
+  color: $red
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $blue
+
+.events__text
+  margin: 0
+
+@media (max-width: 1024px)
+  .events__wrapper-content
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 720px)
+  .events__wrapper-top
+    display: block
+  
+
+@media (max-width: 670px)
+  .events__wrapper-content
+    grid-template-columns: 100%

@@ -1,0 +1,117 @@
+.container
+  margin: 0 auto
+  padding: 0 50px
+  width: 1210px
+  
+.input
+  padding: 13px 20px
+  height: 40px
+  font-size: 12px
+  border: none
+  color: #fff
+  background-color: #fff
+  transition: 0.5s ease-out
+  &:hover,
+  &:focus
+    background-color: $yellow
+    outline: none
+    &::placeholder
+      color: #fff
+
+.button
+  width: 40px
+  height: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $red
+  border: none
+  transition: 0.5s ease-out
+  cursor: pointer
+  &:hover,
+  &:focus
+    background-color: $blue
+
+.title
+  margin: 0
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 64px
+  &--h2
+    text-transform: none
+    font-weight: 500
+    font-size: 30px
+  &--h3
+    margin-bottom: 15px
+    text-transform: none
+    font-weight: 500
+    font-size: 19px
+
+.link
+  color: #fff
+  font-size: 14px
+  transition: 0.3s ease-out
+  & .link__svg
+    margin-left: 10px
+  & path
+    transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $yellow
+  &:hover path,
+  &:focus path
+    fill: $yellow
+  &--hover-blue:hover,
+  &--hover-blue:focus
+    color: $blue
+  &--hover-blue:hover path,
+  &--hover-blue:focus path
+    fill: $blue
+  &--big
+    font-size: 21px
+    text-decoration: underline
+    color: #000
+    & path
+      fill: #000
+      transform: scale(1.5) translateY(3px)
+    &:hover,
+    &:focus
+      color: $blue
+    &:hover path,
+    &:focus path
+      fill: $blue
+
+.section
+  padding-top: 75px
+  padding-bottom: 75px
+  display: flex
+  justify-content: center
+  &--blue
+    background-color: $blue
+  &--yellow
+    background-color: $yellow
+  &--cream
+    background-color: $cream
+
+@media (max-width: 1210px)
+  .container
+    width: 100%
+
+@media (max-width: 900px)
+  .title
+    &--h2
+      font-size: 24px
+
+  .link
+    &--big
+      font-size: 16px
+      & path
+        transform: scale(1) translateY(7px)
+
+@media (max-width: 768px)
+  .section
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .container
+    padding: 0 25px

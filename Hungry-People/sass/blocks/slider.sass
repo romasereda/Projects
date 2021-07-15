@@ -1,0 +1,31 @@
+.slider
+  position: relative
+
+.slider-button
+  position: absolute
+  bottom: 45px
+  left: 50%
+  display: flex
+  justify-content: space-between
+  gap: 20px
+  transform: translateX(-50%)
+
+.slider-button__item
+  width: 10px
+  height: 10px
+  background-color: rgba(256, 256, 256, 0.5)
+  border: none
+  border-radius: 50%
+  transition: 0.5s
+  cursor: pointer
+  &--active
+    background-color: $white
+    cursor: default
+  &:hover,
+  &:focus
+    background-color: $white
+    outline: none
+
+@media (max-width: 768px)
+  .slider-button
+    bottom: 25px

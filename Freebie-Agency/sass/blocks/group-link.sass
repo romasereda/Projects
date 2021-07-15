@@ -1,0 +1,70 @@
+.group-links
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+.group-links__link
+  overflow: hidden
+  outline: none
+  &:hover .group-links__wrapper, &:focus .group-links__wrapper
+    transform: scale(1.2)
+
+.group-links__wrapper
+  padding-top: 130px
+  padding-bottom: 100px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: gray
+  background-repeat: no-repeat
+  transition: 0.5s ease-out
+  &--work
+    color: #373737
+    background-color: #fbfbfb
+    background-image: url(../images/dest/group-links.png), url(../images/dest/briefcase.png)
+    background-position: center 250px, center 70px
+  &--contact
+    color: #fff
+    background-color: #70BD59
+    background-image: url(../images/dest/group-links.png), url(../images/dest/mail.png)
+    background-position: center 250px, center 70px
+
+.group-links__slogan
+  margin: 0
+  margin-bottom: 22px
+  font-family: Oswald, sans-serif
+  font-weight: 300
+  font-size: 24px
+  line-height: 36px
+  letter-spacing: 2.67px
+
+.group-links__text
+  font-weight: 300
+  font-size: 14px
+  line-height: 19px
+  letter-spacing: 1.56px
+  opacity: 0.8
+
+@media (max-width: 1024px)
+  .group-links__wrapper
+    padding-top: 90px
+    padding-bottom: 60px
+    &--work
+      background-position: center 180px, center 50px
+    &--contact
+      background-position: center 180px, center 50px
+
+  .group-links__slogan
+    margin-bottom: 0
+
+@media (max-width: 750px)
+  .group-links
+    grid-template-columns: 100%
+
+  .group-links__wrapper
+    padding-top: 55px
+    padding-bottom: 30px
+    &--work
+      background-position: center 140px, center 17px
+    &--contact
+      background-position: center 140px, center 17px

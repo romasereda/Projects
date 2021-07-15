@@ -1,0 +1,221 @@
+.header
+  min-height: 100vh
+  background-color: #3C4C6A
+  background-image: url(../images/dest/header_bg.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.header__hamburger
+  display: none
+
+.navigation
+  position: absolute
+  width: 100%
+  min-height: 90px
+  display: grid
+  grid-template-columns: 1fr minmax(min-content, 1110px) 1fr
+  align-items: center
+  border-bottom: 1px solid #fff
+
+.navigation__wrapper-left
+  display: flex
+  justify-content: flex-end
+  margin: 0 50px
+
+.logo__image
+  width: 176px
+  max-width: 176px
+
+.navigation__wrapper-right 
+  margin: 0 50px
+
+.navigation__list
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 45px
+  animation: none
+
+.navigation__link
+  color: #fff
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $yellow
+
+.search-button
+  background-color: transparent
+  border: none
+  cursor: pointer
+  & path
+    transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    & path
+      fill: $red
+
+.form-search
+  position: absolute
+  top: 0
+  left: 50%
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  background-color: rgba($green, 0.9)
+  transition: 0.3s ease-out
+  transform: translateX(-50%) translateY(-100%)
+  z-index: 2
+  &--show
+    transform: translateX(-50%) translateY(0)
+
+.form-search__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.form-search__input
+  flex-grow: 1
+
+.form-search__hamburger
+  position: relative
+  top: 3px
+  left: 10px
+  &.is-active .hamburger-inner,
+  &.is-active .hamburger-inner:after,
+  &.is-active .hamburger-inner:before
+    background-color: $red
+    transition: 0.3s ease-out
+  &.is-active:hover .hamburger-inner,
+  &.is-active:hover .hamburger-inner:after,
+  &.is-active:hover .hamburger-inner:before
+    background-color: $blue
+
+.header__content
+  padding-bottom: 50px
+  display: grid
+  grid-template-rows: repeat(2, 1fr)
+  color: #fff
+
+.header__wrapper-top
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.header__wrapper-bottom
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+.header__title
+  margin-bottom: 35px
+
+.header__slogan
+  margin-bottom: 25px
+  display: block
+  font-weight: normal
+  font-size: 24px
+
+.header__link
+  font-size: 16px
+
+.list-link
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  align-content: start
+  gap: 30px
+
+.list-link__item
+  padding: 30px 40px
+  &--blue
+    background-color: $blue
+  &--cream
+    background-color: $green
+  &--yellow
+    background-color: $yellow
+  &--red
+    background-color: $red
+
+@media (max-width: 1050px)
+  .navigation__wrapper-left
+    margin: 0 15px
+
+  .navigation__wrapper-right
+    margin: 0 15px
+
+  .header__title
+    font-size: 50px
+
+@media (max-width: 900px)
+  .navigation__list
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    min-height: 100vh
+    flex-direction: column
+    background-color: rgba($green, 0.9)
+    transform: translateY(-100%)
+
+  .header__content
+    padding-top: 150px
+    display: block
+
+  .header__wrapper-bottom
+    display: block
+
+  .header__wrapper-left
+    margin-bottom: 30px
+
+  @keyframes showMenu
+    0%
+      display: none
+    1%
+      display: flex
+      transform: translateY(-100%)
+    100%
+      display: flex
+      transform: translateY(0%)
+
+  @keyframes hideMenu
+    0%
+      display: flex
+      transform: translateY(0%)
+    99%
+      display: flex
+      transform: translateY(-100%)
+    100%
+      display: none
+
+  .navigation__wrapper-right
+    display: flex
+    justify-content: flex-end
+
+  .header__hamburger
+    display: block
+    & .hamburger-inner,
+    & .hamburger-inner:after,
+    & .hamburger-inner:before
+      background-color: #fff
+    &.is-active .hamburger-inner,
+    &.is-active .hamburger-inner:after,
+    &.is-active .hamburger-inner:before
+      background-color: $red
+
+@media (max-width: 768px)
+  .header__content
+    padding-top: 120px
+
+  .header__title
+    margin-bottom: 0
+
+@media (max-width: 630px)
+  .list-link
+    grid-template-columns: 100%
+
+@media (max-width: 500px)
+  .header__title
+    font-size: 35px
+
+  .header__slogan
+    font-size: 18px

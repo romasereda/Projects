@@ -1,0 +1,202 @@
+.works
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-auto-rows: minmax(360px, max-content)
+  column-gap: 12px
+
+.works__item
+  position: relative
+  display: none
+  flex-direction: column
+  align-items: flex-end
+  grid-row: span 2
+  color: #252525
+  &:hover
+    .works__slogan
+      text-decoration: line-through solid $accent
+  &--left
+    align-items: flex-start
+    & .works__slogan
+      right: 0
+      left: auto
+    & .works__wrapper
+      margin-right: 0
+      margin-left: 125px
+      align-items: flex-start
+    & .works__text
+      text-align: left
+
+.works__image
+  display: block
+  width: 455px
+  height: 455px
+
+.works__slogan
+  position: absolute
+  left: 0
+  top: 262px
+  text-transform: uppercase
+  font-family: Oswald, sans-serif
+  font-weight: 300
+  font-size: 48px
+  line-height: 71px
+  letter-spacing: 3px
+  transition: text-decoration 0.5s ease-out
+  text-decoration: line-through solid transparent
+
+.works__wrapper
+  margin-right: 150px
+  margin-bottom: 25px
+  max-width: 275px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+.works__title
+  margin-top: 24px
+  margin-bottom: 17px
+  font-weight: 300
+  font-size: 18px
+  line-height: 25px
+  letter-spacing: 1.15px
+
+.works__text
+  margin-top: 0
+  margin-bottom: 20px
+  text-align: right
+  font-size: 13px
+  line-height: 23px
+  letter-spacing: 0.83px
+  color: #c2c2c2
+
+.works__button
+  font-size: 13px
+  line-height: 18px
+  letter-spacing: 0.83px
+  opacity: 1
+
+.works__wrapper-button
+  display: none
+  align-items: flex-end
+  &--left
+    margin-right: 0
+    margin-right: auto
+
+.works__button-show
+  margin-bottom: 130px
+  margin-left: auto
+  text-transform: lowercase
+  opacity: 1
+  font-size: 25px
+  line-height: 40px
+  cursor: pointer
+  background-color: transparent
+  border: none
+
+.tabs
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  gap: 20px
+  max-width: 550px
+
+.tab
+  text-transform: uppercase
+  font-size: 13px
+  line-height: 18px
+  letter-spacing: 0.8px
+  background-color: transparent
+  border: none
+  opacity: 0.3
+  cursor: pointer
+  transition: 0.5s ease-out
+  &--active
+    opacity: 1
+  &:hover, &:focus
+    outline: none
+    opacity: 1
+  &--active
+    opacity: 1
+
+@media (max-width: 1200px)
+  .works__image
+    width: 400px
+    height: 400px
+
+  .works__slogan
+    top: 210px
+
+  .works__item
+    &--left .works__wrapper
+      margin-left: 100px
+
+  .works__wrapper
+    margin-right: 100px
+
+@media (max-width: 970px)
+  .works
+    grid-auto-rows: minmax(280px, max-content)
+
+  .works__image
+    width: 300px
+    height: 300px
+
+  .works__slogan
+    top: 170px
+    font-size: 35px
+    line-height: 55px
+
+  .works__wrapper
+    margin-right: 65px
+
+  .works__item
+    &--left .works__wrapper
+      margin-left: 65px
+
+  .tabs
+    justify-content: flex-start
+
+  .works__button-show
+    margin-bottom: 100px
+
+@media (max-width: 768px)
+  .works
+    grid-template-columns: 100%
+    grid-auto-rows: max-content
+    row-gap: 30px
+
+  .works__item
+    align-items: flex-start
+    &--left .works__slogan
+      left: 330px
+    &--left .works__wrapper
+      margin-left: 0
+
+  .works__slogan
+    top: 40px
+    left: 330px
+
+  .works__wrapper
+    align-items: flex-start
+
+  .works__text
+    text-align: left
+
+  .works__button-show
+    margin-right: auto
+
+@media (max-width: 660px)
+  .works__item
+    &--left .works__slogan
+      left: auto
+      right: 0
+
+  .works__slogan
+    left: auto
+    right: 0
+
+@media (max-width: 430px)
+
+  .works__image
+    width: 100%
+    height: auto

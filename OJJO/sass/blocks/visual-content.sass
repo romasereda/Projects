@@ -1,0 +1,39 @@
+.visual-content
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-rows: 300px
+
+.visual-content__block
+  background-color: $textcolor
+  &--big
+    grid-column: span 2
+
+.visual-content__image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.visual-content__video
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+@media (max-width: 1200px)
+  .visual-content
+    grid-auto-rows: 250px
+
+@media (max-width: 1024px)
+  .visual-content
+    grid-auto-rows: 200px
+
+@media (max-width: 768px)
+  .visual-content
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-rows: 250px
+
+  .visual-content__block--position
+    grid-row: 3 / 4
+  
+@media (max-width: 586px)
+  .visual-content
+    grid-auto-rows: 170px

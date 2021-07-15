@@ -1,0 +1,197 @@
+.tabs
+  margin-bottom: 55px
+  padding: 0 45px
+  display: flex
+  flex-wrap: wrap
+  align-items: start
+  justify-content: space-between
+  gap: 22px
+
+.tabs__item
+  position: relative
+
+.tab
+  display: block
+  padding: 15px
+  min-width: 165px
+  min-height: 61px
+  text-transform: uppercase
+  font-size: 18px
+  line-height: 21px
+  letter-spacing: 0.1em
+  border: 1px solid #d6d6d6
+  background-color: #f9f9f9
+  transition: 0.5s
+  cursor: pointer
+  &:hover,
+  &:focus
+    transform: translate(6px, 6px)
+    background-color: $accent
+    color: $white
+    border: none
+    outline: none
+  &--disabled
+    min-height: 66px
+    color: $white
+    border: none
+    background-color: $textcolor
+    transition: 0s
+    &:hover,
+    &:focus
+      transform: none
+      background-color: $textcolor
+      cursor: default
+    &:focus
+      outline: none
+    & + .tab__block
+      display: none
+  
+
+.tab__block
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  border: 1px solid #d6d6d6
+  z-index: -1
+  transform: translate(6px, 6px)
+  transition: 0.5s
+
+.groups
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: 280px
+  gap: 30px
+  &--big
+    grid-auto-rows: 370px
+  &--margin60
+    margin-bottom: 60px
+
+.groups__link
+  position: relative
+  padding: 30px
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  width: 100%
+  height: 100%
+  text-decoration: none
+  color: $white
+  transition: 0.5s
+  &:hover,
+  &:focus
+    color: $accent
+    outline: none
+  &:hover .groups__text,
+  &:focus .groups__text
+    transform: translateY(-100%)
+    font-size: 30px
+  &:hover .groups__block-bg,
+  &:focus .groups__block-bg
+    filter: brightness(40%)
+  &--big
+    &:hover .groups__text,
+    &:focus .groups__text
+      transform: translateY(-30%)
+      font-size: 21px
+
+.groups__text
+  text-align: center
+  text-transform: uppercase
+  font-size: 24px
+  line-height: 28px
+  letter-spacing: 0.1em
+  transition: 0.5s
+  &--small
+    font-size: 21px
+    line-height: 1.4
+
+.groups__block-bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-position: bottom
+  z-index: -1
+  filter: brightness(100%)
+  transition: 0.5s
+
+@for $i from 1 through 11
+  .groups__block-bg--#{$i}
+    background-image: url("../images/dest/groups_#{$i}.jpg")
+
+@for $i from 1 through 3
+  .groups__block-big--#{$i}
+    background-image: url("../images/dest/groups_big_#{$i}.jpg")
+
+@media (max-width: 1200px)
+  .tab
+    padding: 12px
+    min-width: 145px
+    min-height: 61px
+    font-size: 16px
+    line-height: 18px
+
+  .groups
+    grid-auto-rows: 240px
+    gap: 20px
+    &--big
+      grid-auto-rows: 320px
+
+@media (max-width: 1024px)
+  .tabs
+    justify-content: start
+    gap: 18px
+
+  .groups
+    grid-auto-rows: 210px
+    &--big
+      grid-auto-rows: 290px
+
+  .groups__link
+    &:hover .groups__text
+      transform: translateY(-100%)
+      font-size: 22px
+    &--big
+      &:hover .groups__text
+        transform: translateY(-30%)
+        font-size: 18px
+
+  .groups__text
+    font-size: 20px
+    line-height: 24px
+    &--small
+      font-size: 18px
+
+@media (max-width: 768px)
+  .tab
+    padding: 12px
+    min-width: 120px
+    min-height: 50px
+    font-size: 16px
+    line-height: 18px
+    font-size: 12px
+
+  .tabs
+    justify-content: center
+
+  .groups 
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-rows: 180px
+    &--big
+      grid-auto-rows: 250px
+
+@media (max-width: 586px)
+  .groups 
+    grid-template-columns: 1fr
+    grid-auto-rows: 100px
+    &--big
+      grid-auto-rows: 250px
+
+    .groups__link
+      &:hover .groups__text
+        transform: translateY(-50%)

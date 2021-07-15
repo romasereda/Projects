@@ -1,0 +1,32 @@
+.container
+	margin: 0 auto
+	padding: 0 $padding
+	max-width: 1265px
+
+.button
+  position: relative
+  display: inline-block
+  text-transform: uppercase
+  font-size: 10px
+  line-height: 15px
+  letter-spacing: 0.6px
+  color: #252525
+  opacity: 0.5
+  overflow: hidden
+  transition: 0.5s ease-out
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 1.5px
+    background-color: $accent
+    transform: translateX(-100%) translateY(-50%)
+    transition: 0.5s ease-out
+  &:hover, &:focus
+    opacity: 1
+    outline: none
+    &::before
+      transform: translateX(0%) translateY(-50%)
+  

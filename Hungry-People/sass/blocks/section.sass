@@ -1,0 +1,180 @@
+.section
+  position: relative
+  padding: 100px 40px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 85px
+  align-items: center
+  &--text-white
+    color: $white
+  &--1fr
+    grid-template-columns: 100%
+    gap: 0
+
+.section__image-wrapper
+  position: relative
+  margin-right: 125px
+  max-width: 475px
+  &::before
+    content: ""
+    position: absolute
+    top: 50% 
+    right: 0
+    width: 52.631%
+    height: 52.631%
+    border: 20px solid $accent
+    border-radius: 5px
+    transform: translateY(-50%) translateX(50%)
+  &--left
+    margin-right: 0
+    margin-left: 125px
+    &::before
+      left: 0
+      transform: translateY(-50%) translateX(-50%)
+
+.section__image
+  max-width: 475px
+  height: auto
+  border-radius: 5px
+  box-shadow: 0 0 50px rgba(#000000, 0.5)
+
+.section__image-slogan
+  position: absolute
+  bottom: 0
+  margin: 0
+  padding: 0 20px
+  width: calc(100% + 3px)
+  height: 80px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  font-family: Banny, sans-serif
+  font-size: 24px
+  background-color: $black
+  border-radius: 5px 5px 0 0
+  &--left
+    transform: rotate(90deg) translateY(100%)
+    transform-origin: 100% 100%
+  &--right
+    transform: rotate(-90deg) translateY(100%)
+    transform-origin: 0 100%
+
+.wrapper-bg
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  &--chef
+    background-image: url("../images/dest/section_bg_chef.jpg")
+  &--chocolate
+    background-image: url("../images/dest/section_bg_chocolate.jpg")
+  &--events
+    background-image: url("../images/dest/section_bg_events.jpg")
+
+.section__sub-text
+  position: absolute
+  top: 45px
+  left: 50%
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+  line-height: 14px
+  letter-spacing: 6px
+  transform: translateX(-50%)
+
+.section__tagline
+  position: absolute
+  bottom: 45px
+  left: 50%
+  text-align: center
+  color: rgba(51, 51, 51, 0.5)
+  transform: translateX(-50%)
+  &--white
+    color: rgba(#ffffff, 0.5)
+
+.show-animations
+  animation: emergence 1.5s
+
+.bg-line
+  position: absolute
+  display: flex
+  justify-content: space-around
+  width: 100%
+  height: 100%
+
+.bg-line__item
+  width: 1px
+  height: 100%
+  background-color: rgba(#ffffff, 0.2)
+
+@keyframes emergence
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.title-events
+  display: none
+  &--m30
+    margin-top: 30px
+
+
+@media (max-width: 1200px)
+  .section
+    padding: 80px 40px
+
+  .section__image-wrapper
+    margin-right: 107px
+    &::before
+      border-width: 17px
+    &--left
+      margin-right: 0
+      margin-left: 107px
+
+  .section__sub-text
+    top: 35px
+
+  .section__image-slogan
+    font-size: 22px
+    height: 70px
+
+@media (max-width: 1024px)
+  .section
+    gap: 30px
+    &--1fr
+      gap: 0
+
+  .section__image-wrapper
+    margin-right: 95px
+    &::before
+      border-width: 15px
+    &--left
+      margin-right: 0
+      margin-left: 95px
+
+  .section__tagline
+    bottom: 25px
+
+  .section__image-slogan
+    font-size: 17px
+    height: 60px
+
+@media (max-width: 768px)
+  .section
+    grid-template-columns: 100%
+    padding: 60px 20px
+
+  .section__block--image
+    display: none
+
+  .section__sub-text
+    top: 23px
+
+  .section__tagline
+    bottom: 15px
+    font-size: 11px
+
+  .title-events
+    display: block
+
+  .bg-line
+    display: none

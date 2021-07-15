@@ -1,0 +1,51 @@
+// USER VARIABLES SECTION
+$accent: #F1BB00  // Accent Color
+$fontsize: 18px // Body Font Size
+$textcolor: #333333 // Text Color
+$white: #ffffff
+$lineheight: 1.4 // Document Line Height
+$userfont: Gilroy, sans-serif // User Font Family
+$notofont: "Noto Serif", serif
+$colorborder: #d6d6d6
+
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: url($furl) format('woff2')
+
+@include font('Gilroy', normal, 300, '../fonts/Gilroylight.woff2')
+@include font('Gilroy', normal, 800, '../fonts/Gilroyextrabold.woff2')
+@include font('Noto Serif', normal, 700, '../fonts/notoserifbold.woff2')
+
+// Normalize.css
+@import "../../node_modules/normalize.css/normalize.css"
+
+// GENERAL DOCUMENT STYLES
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: $white
+
+*, *::before, *::after
+	box-sizing: border-box
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	background-color: #f9f9f9
+
+ul,li
+	margin: 0
+	padding: 0
+	list-style: none

@@ -1,0 +1,124 @@
+.product
+  margin-bottom: 120px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+
+.slider
+  display: grid
+  grid-template-rows: 1fr min-content
+  gap: 30px
+  height: 580px
+
+.slider__content
+  position: relative
+  background-color: #000000
+
+.slider__image-big
+  position: absolute
+  width: 100%
+  height: 100%
+  object-fit: cover
+  animation: sliderShow 1s
+
+@keyframes sliderShow
+  0%
+    filter: brightness(40%)
+  100%
+    filter: brightness(100%)
+
+.slider__list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 30px
+
+.slider__item
+  position: relative
+  height: 120px
+  cursor: pointer
+  transition: 0.5s
+  border: none
+  &:hover,
+  &:focus
+    filter: brightness(40%)
+    outline: none
+
+.slider__image-min
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.product__wrapper
+  display: flex
+  flex-direction: column
+  gap: 30px
+  padding: 40px
+  border: 1px solid $colorborder
+  outline: 1px solid $colorborder
+  outline-offset: -11px
+
+.product__title
+  margin: 0
+  text-transform: uppercase
+  font-size: 24px
+  font-weight: normal
+  letter-spacing: 1px
+
+.product-feature
+  margin: 0
+  padding-bottom: 30px
+  display: flex
+  flex-wrap: wrap
+  gap: 25px
+  color: $colorborder
+  font-size: 14px
+  border-bottom: 1px solid $colorborder
+
+.product-feature__item
+  margin: 0
+
+.product-feature__value
+  margin-left: 15px
+
+.product__paragraph
+  margin: 0
+  font-size: 14px
+
+.product__price
+  font-size: 24px
+  text-transform: uppercase
+  letter-spacing: 0.5px
+
+.product__wrapper--button
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+
+@media (max-width: 900px)
+  .product
+    grid-template-columns: 1fr
+    margin-bottom: 40px
+
+  .product__wrapper
+    padding: 25px
+    gap: 15px
+
+  .slider
+    order: 2
+    gap: 15px
+
+  .slider__list
+    gap: 15px
+
+  .slider__item
+    height: 100px
+
+@media (max-width: 600px)
+  .slider
+    height: 400px
+
+  .slider__item
+    height: 80px

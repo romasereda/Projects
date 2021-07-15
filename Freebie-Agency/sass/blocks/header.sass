@@ -1,0 +1,216 @@
+.header
+  position: relative
+  min-height: 100vh
+  color: #fff
+  overflow: hidden
+
+.header__title
+  margin: 0 $padding
+  margin-bottom: 30px
+  max-width: 1170px
+  text-transform: uppercase
+  text-align: center
+  font-size: 72px
+  letter-spacing: 4.6px
+  line-height: 107px
+  font-family: Oswald, sans-serif
+  font-weight: 500
+
+.header__text
+  margin: 0 $padding
+  max-width: 900px
+  text-align: center
+  font-size: 20px
+  line-height: 27px
+  letter-spacing: 1.28px
+  opacity: 0.8
+
+.header-slider
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.header-slider__item
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  overflow: hidden
+
+@for $i from 1 through 3
+  .header-slider__item--#{$i}
+    background-image: url(../images/dest/header_bg_#{$i}.jpg)
+
+.swiper-pagination.header-slider__pagination.swiper-pagination-bullets
+  position: absolute
+  bottom: 40px
+  display: flex
+  justify-content: center
+
+.header-slider .swiper-pagination-bullet
+  margin: 0 6px
+  width: 40px
+  position: relative
+  opacity: 1
+  background-color: transparent
+  &:hover, &:focus
+    outline: none
+    &::after
+      color: $accent
+  &::after
+    content: "01"
+    position: absolute
+    left: 50%
+    bottom: 0
+    font-weight: bold
+    font-family: Oswald, sans-serif
+    font-size: 18px
+    line-height: 27px
+    letter-spacing: 1.15px
+    color: rgba(#fff, 0.43)
+    transform: translateX(-50%)
+    transition: 0.5s ease-out
+  &.swiper-pagination-bullet-active
+    &::after
+      bottom: 8px
+      font-size: 36px
+      color: #fff
+    &::before
+      content: ""
+      position: absolute
+      top: -12px
+      left: 0
+      width: 100%
+      height: 3px
+      background-color: $accent
+
+.header-slider .swiper-pagination-bullet:nth-child(2)
+  &::after
+    content: "02"
+
+.header-slider .swiper-pagination-bullet:nth-child(3)
+  &::after
+    content: "03"
+
+.navigation
+  position: relative
+  left: 0
+  z-index: 3
+  padding-top: 80px
+
+.navigation__list
+  display: flex
+  justify-content: flex-end
+
+.navigation__link
+  position: relative
+  margin-left: 60px
+  text-transform: uppercase
+  font-family: Oswald, sans-serif
+  font-size: 14px
+  line-height: 21px
+  letter-spacing: 1.9px
+  color: #fff
+  &::before
+    content: ""
+    position: absolute
+    bottom: -2px
+    right: 0
+    width: 18px
+    height: 2px
+    background-color: $accent
+    transition: width 0.5s ease-out
+  &:hover, &:focus
+    outline: none
+    &::before
+      width: calc(100% + 10px)
+  &--disabled
+    &::before
+      width: calc(100% + 10px)
+      transition: none
+    &:hover, &:focus
+      &::before 
+        width: calc(100% + 10px)
+
+.hamburger
+  padding: 0
+  display: none
+  position: absolute
+  top: $padding
+  right: $padding
+  z-index: 100
+  & .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+    background-color: #fff
+  &:hover
+    opacity: 1
+  &:hover .hamburger-inner, &:hover .hamburger-inner::after, &:hover .hamburger-inner::before
+    background-color: $accent
+  &.is-active
+    & .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+      background-color: #fff
+    &:hover
+      opacity: 1
+    &:hover .hamburger-inner, &:hover .hamburger-inner::after, &:hover .hamburger-inner::before
+      background-color: $accent
+
+@media (max-width: 1024px)
+  .header__title
+    margin-bottom: 20px
+    font-size: 55px
+    line-height: 70px
+    letter-spacing: 3px
+
+  .header__text
+    font-size: 17px
+    line-height: 22px
+    letter-spacing: 1px
+
+@media (max-width: 768px)
+  .header__title
+    margin-bottom: 10px
+    font-size: 40px
+    line-height: 52px
+    letter-spacing: 2.5px
+
+  .header__text
+    font-size: 15px
+    line-height: 20px
+
+  .navigation
+    padding-top: calc(24px + #{$padding})
+
+  .navigation__link
+    margin-left: 35px
+
+@media (max-width: 550px)
+  .hamburger
+    display: block
+
+  .navigation
+    position: absolute
+    left: 100%
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, 0.9)
+    z-index: 15
+
+  .navigation__list
+    flex-direction: column
+    align-items: flex-start
+
+  .navigation__link
+    margin-left: 0
+    margin-bottom: 50px
+    display: block
+    font-size: 20px
+    line-height: 32px
+    &::before
+      left: 0

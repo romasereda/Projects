@@ -1,0 +1,328 @@
+.catalog
+  margin-top: 100px
+  margin-bottom: 120px
+
+.catalog-form
+  margin-bottom: 60px
+
+.catalog-form__legend-list
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  gap: 30px
+
+.catalog-form__legend-item
+  position: relative
+
+.catalog-form__legend
+  position: relative
+  padding-bottom: 10px
+  width: 100%
+  text-align: left
+  font-size: 16px
+  cursor: pointer
+  border: none
+  border-bottom: 1px solid $colorborder
+  transition: 0.5s
+  background-color: transparent
+  &::before
+    content: ""
+    position: absolute
+    right: 0
+    top: 6px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 11px 8px 0 8px
+    border-color: $textcolor transparent transparent transparent
+    transition: 0.5s
+  &:hover, &:focus
+    color: $accent
+    outline: none
+  &:hover::before, &:focus::before
+    border-color: $accent transparent transparent transparent
+  &--active
+    color: $accent
+    &::before
+      border-color: $accent transparent transparent transparent
+      transform: rotate(90deg)
+
+.catalog-form__wrapper
+  position: absolute
+  top: calc(100% + 20px)
+  min-width: 255px
+  border: 1px solid $colorborder
+  background-color: $white
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    top: -11px
+    left: 35px
+    width: 20px
+    height: 20px
+    border-left: 1px solid $colorborder  
+    border-top: 1px solid $colorborder  
+    background-color: $white
+    transform: rotate(45deg)
+  &--last
+    right: 0
+    &::before
+      left: 125px
+
+.catalog-form__block
+  padding: 25px 30px
+  &--border
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 25px
+    border-top: 1px solid $colorborder
+
+.catalog-form__list
+  display: grid
+  gap: 15px
+
+.catalog-form__checkbox
+  position: absolute
+  margin-left: -10000px
+  &:checked + .catalog-form__label .catalog-form__block-checkbox
+    background-color: $textcolor
+  &:focus + .catalog-form__label
+    color: $accent
+
+.catalog-form__label
+  display: flex
+  align-items: center
+  font-size: 14px
+  cursor: pointer
+  transition: 0.5s
+  &:hover
+    color: $accent
+  &:hover .catalog-form__block-checkbox
+    background-color: $accent
+
+.catalog-form__block-checkbox
+  margin-right: 15px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 20px
+  height: 20px
+  background-color: $colorborder
+  transition: 0.5s
+
+.catalog-form__text
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 12px
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.catalog__content
+  margin-bottom: 60px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  column-gap: 30px
+  row-gap: 60px
+  &--margin-none
+    margin-bottom: 0
+
+.catalog__item
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 35px
+  border: 1px solid transparent
+  transition: 0.5s
+  &:hover
+    border-color: $colorborder
+
+.catalog__image
+  width: 100%
+
+.catalog__name
+  margin-top: 25px
+  margin-bottom: 15px
+  text-align: center
+  font-size: 24px
+
+.catalog__subname
+  display: block
+  font-size: 16px
+  font-weight: normal
+
+.catalog__line
+  height: 1px
+  background-color: $colorborder
+  grid-column: span 3
+
+.catalog__button
+  display: block
+  margin: 0 auto
+
+.info
+  margin: 0 auto
+  margin-bottom: 150px
+  padding: 0 45px
+  max-width: 1010px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.info__text
+  position: relative
+  max-width: 540px
+  height: auto
+  overflow: hidden
+  &--hide
+    height: 240px
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background-image: linear-gradient(transparent, #f9f9f9 82%)
+  &--show
+    padding-bottom: 20px
+    height: auto
+
+.info__button
+  position: absolute
+  bottom: 0
+  left: 0
+  text-transform: uppercase
+
+.info__images
+  width: 280px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  row-gap: 30px
+
+.info__item
+  display: grid
+  justify-items: center
+  min-height: 133px
+  
+.info__image-text
+  text-align: center
+  font-size: 16px
+
+@media (max-width: 1200px)
+  .catalog-form__legend
+    font-size: 14px
+    padding-bottom: 5px
+    &::before
+      top: 6px
+      border-width: 9px 6px 0 6px
+
+@media (max-width: 1024px)
+  .catalog
+    margin-bottom: 100px
+
+  .catalog-form
+    margin-bottom: 40px
+
+  .catalog-form__wrapper
+    min-width: 220px
+
+  .catalog-form__block
+    padding: 15px 20px
+
+  .catalog__item
+    padding: 25px
+
+  .info
+    margin-bottom: 110px
+
+@media (max-width: 910px)
+  .info
+    flex-direction: column
+
+  .info__text
+    max-width: 100%
+
+  .info__images
+    margin-top: 30px
+    width: 100%
+    grid-template-columns: repeat(4, 1fr)
+
+@media (max-width: 850px)
+  .catalog-form__wrapper--last
+    &::before
+      left: 150px
+
+  .catalog__content
+    grid-template-columns: repeat(2, 1fr)
+    gap: 15px
+
+  .catalog__item
+    padding: 10px
+    border: 1px solid $colorborder
+
+  .catalog__line
+    display: none
+
+@media (max-width: 768px)
+  .catalog
+    margin-top: 50px
+    margin-bottom: 60px
+
+  .catalog-form__legend-list
+    grid-template-columns: repeat(3, 1fr)
+
+  .catalog-form__wrapper--last
+    &::before
+      left: 60px
+
+  .catalog-form__wrapper--last768
+    right: 0
+    &::before
+      left: 60px
+
+  .info
+    margin-bottom: 40px
+
+@media (max-width: 670px)
+  .catalog-form
+    margin-bottom: 25px
+
+  .catalog-form__wrapper--last
+    &::before
+      left: 90px
+
+  .catalog-form__wrapper--last768
+    &::before
+      left: 90px
+
+  .catalog__content
+    grid-template-columns: 1fr
+
+@media (max-width: 610px)
+  .info__images
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 570px)
+  .catalog-form__wrapper--last
+    &::before
+      left: 125px
+
+  .catalog-form__wrapper--last768
+    &::before
+      left: 125px
+
+@media (max-width: 450px)
+  .catalog-form__legend-list
+    grid-template-columns: repeat(2, 1fr)
+
+  .catalog-form__wrapper--last768
+    left: 0
+    &::before
+      left: 35px
+
+  .catalog-form__wrapper--450right
+    right: 0
+    &::before
+      left: 110px

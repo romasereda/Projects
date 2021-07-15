@@ -1,0 +1,58 @@
+// USER VARIABLES SECTION
+$accent: #998431 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #fff // Text Color
+$lineheight: 24px // Document Line Height
+$userfont: Montserrat, sans-serif // User Font Family
+$dark: #282828
+$light: #c4c4c4
+
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Montserrat', normal, 400, '../fonts/montserrat-v15-latin_cyrillic-regular.woff2')
+@include font('Montserrat', normal, 500, '../fonts/montserrat-v15-latin_cyrillic-500.woff2')
+@include font('Montserrat', normal, 700, '../fonts/montserrat-v15-latin_cyrillic-700.woff2')
+@include font('Playfair Display', normal, 700, '../fonts/playfair-display-v22-latin_cyrillic-700.woff2')
+
+// Normalize.css
+@import "../../node_modules/normalize.css/normalize.css"
+
+// GENERAL DOCUMENT STYLES
+::placeholder
+	color: #fff
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*, *::before, *::after
+	box-sizing: border-box
+
+img 
+	max-width: 100%
+	height: auto 
+
+ul
+	margin: 0
+	padding: 0
+
+li
+	list-style: none
+
+a
+	text-decoration: none
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

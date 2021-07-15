@@ -1,0 +1,190 @@
+body
+  display: grid
+  grid-template-rows: min-content 1fr min-content
+  min-height: 100vh 
+
+.container
+  margin: 0 auto
+  padding: 0 45px
+  width: 1200px
+
+.button
+  padding: 15px 35px
+  text-transform: uppercase
+  text-decoration: none
+  text-align: center
+  font-weight: 500
+  font-size: 14px
+  line-height: 16px
+  letter-spacing: 0.1em
+  color: $white
+  border: none
+  background-color: $textcolor
+  transition: 0.5s
+  cursor: pointer
+  &:hover, &:focus
+    background-color: $accent
+    color: $white
+    outline: none
+  &--header
+    padding: 13px 33px
+    font-size: 18px
+    line-height: 21px
+    border: 1px solid $white
+    &:hover,
+    &:focus
+      border-color: $accent
+  &--white
+    background-color: $white
+    color: $textcolor
+    &:hover
+      color: $white
+      background-color: $accent
+  &--catalog
+    font-size: 12px
+    padding: 8px 12px
+  &--big-white
+    background-color: #f9f9f9
+    color: $textcolor
+    border: 1px solid $textcolor
+    &:hover,
+    &:focus
+      border-color: $accent
+
+.button-underline
+  padding: 0
+  font-size: 12px
+  line-height: 20px
+  letter-spacing: 1px
+  background-color: transparent
+  border: none
+  border-bottom: 1px dashed $textcolor
+  cursor: pointer
+  transition: 0.5s
+  &:hover,&:focus
+    color: $accent
+    border-color: $accent
+    outline: none
+  &--big
+    font-size: 18px
+
+.input
+  padding: 15px 20px
+  background-color: $white
+  border: 1px solid $colorborder
+  font-size: 14px
+  transition: 0.5s
+  &--flex-grow-1
+    flex-grow: 1
+  &::placeholder
+    transition: 0.5s
+    letter-spacing: 1.4px
+  &:hover
+    border-color: $accent
+  &:hover::placeholder
+    color: $accent
+  &:focus
+    color: $white
+    background-color: $accent
+    border-color: $accent
+    outline: none
+  &:focus::placeholder
+    color: $white
+  &:focus::selection
+    background-color: $textcolor
+    color: $white
+  &--small
+    padding: 10px
+    width: 110px
+    font-size: 12px
+  
+.hide
+  display: none
+
+.show
+  display: block
+  &--flex
+    display: flex
+
+.section
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 100px
+  margin-bottom: 120px
+  &--bg-black
+    background-image: url("../images/dest/section_bg.png")
+    color: $white
+    margin-top: 0
+    margin-bottom: 0
+    padding-top: 100px
+    padding-bottom: 100px
+
+.section__title
+  margin: 0 40px
+  margin-bottom: 60px
+  text-align: center
+  font-family: $notofont
+  font-size: 30px
+  line-height: 41px
+  &--padding-top-120
+    padding-top: 120px
+
+.section__subtitle
+  margin-bottom: 15px
+  display: block
+  font-family: $userfont
+  font-weight: normal
+  font-size: 21px
+  line-height: 1.4
+
+.section__text
+  margin: 0 20px
+  margin-bottom: 60px
+  max-width: 730px
+  text-align: center
+
+@media (max-width: 1200px)
+  .container
+    width: 100%
+  
+  .section
+    margin-top: 60px
+    margin-bottom: 80px
+    &--bg-black
+      margin-top: 0
+      margin-bottom: 0
+      padding-top: 80px
+      padding-bottom: 80px
+
+@media (max-width: 1024px)
+  .section__title
+    margin-bottom: 35px
+
+  .section__subtitle
+    margin-bottom: 0
+  
+  .button
+    &--form-mailing
+      width: 100%
+
+  .input
+    &--mailing
+      width: 100%
+
+@media (max-width: 768px)
+   .section
+    margin-top: 40px
+    margin-bottom: 60px
+    &--bg-black
+      margin-top: 0
+      margin-bottom: 0
+      padding-top: 60px
+      padding-bottom: 60px
+
+@media (max-width: 586px)
+  .section__title
+    margin-bottom: 20px
+
+  .section__text
+    margin-bottom: 20px

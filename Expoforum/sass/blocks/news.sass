@@ -1,0 +1,93 @@
+.news
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+
+.news__block-image
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.new__link-image
+  transition: 0.3s ease-out
+  filter: brightness(100%)
+  & img
+    display: block
+  &:hover
+    filter: brightness(40%)
+
+.news__wrapper-top
+  margin-bottom: 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.news__list
+  display: flex
+  flex-direction: column
+  gap: 30px
+
+.news__item
+  display: flex
+  gap: 30px
+
+.news__text
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.news__date
+  margin-bottom: 5px
+  color: $red
+
+.news__link
+  font-size: 18px
+  font-weight: 500
+  color: #000
+  transition: 0.3s ease-out
+  &:hover,
+  &:focus
+    color: $blue
+
+@media (max-width: 1024px)
+  .news
+    gap: 15px
+
+  .news__wrapper-top
+    margin-bottom: 0
+
+  .news__list
+    gap: 15px
+
+  .news__date
+    font-size: 14px
+
+  .news__link
+    font-size: 16px
+
+@media (max-width: 970px)
+  .news__block-image
+    justify-content: flex-start
+    gap: 30px
+
+@media (max-width: 768px)
+  .news
+    grid-template-columns: 100%
+
+  .news__block-image
+    order: 2
+    gap: 15px
+    flex-direction: row
+
+@media (max-width: 570px)
+  .news__block-image
+    flex-direction: column
+
+  .news__list
+    margin-top: 20px
+
+  .news__item
+    margin-bottom: 10px
+
+  .news__image
+    display: none
